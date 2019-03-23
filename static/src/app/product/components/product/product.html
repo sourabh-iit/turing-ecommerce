@@ -1,0 +1,36 @@
+<div class="product-short">
+  <div class="heading">
+    <span class="brick"></span>
+    <a [routerLink]="['/products',product.name.split(' ').join('-'),product.id]" class="text">{{product.name}}</a>
+  </div>
+  <div class="content mt-2">
+    <div class="row">
+      <div class="col-7">
+        <div>{{product.description}}</div>
+        <div class="mt-2">Price: 
+          <ng-container *ngIf="toFloat(product.discounted_price)>0; else originalPrice">
+            <del>{{product.price}}</del> {{product.discounted_price}}
+          </ng-container>
+          <ng-template #originalPrice>{{product.price}}</ng-template>
+        </div>
+      </div>
+      <div class="col-5">
+        <img [src]="STATIC_URL+'images/product_images/'+product.thumbnail">
+      </div>
+      <div class="col-7 mt-2 mb-2 d-flex">
+        <ng-container *ngFor="let attribute_name of getKeys(product.attributes); let i = index">
+          <div class="d-flex align-items-center" [class.ml-2]="i!=0">
+            {{attribute_name}}:
+            <select class="ml-1" [(ngModel)]="attributes[attribute_name]">
+              <option [ngValue]="attribute" *ngFor="let attribute of product.attributes[attribute_name]">
+                {{attribute.value}}</option>
+            </select>
+          </div>
+        </ng-container>
+      </div>
+      <div class="col-12 mt-2">
+        <button (click)="addToCart(true)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

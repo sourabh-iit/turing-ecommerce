@@ -1,0 +1,26 @@
+
+<div class="header mb-4 mt-2">
+  <a [routerLink]="'/'">
+    <img src="{{STATIC_URL}}images/images/tshirtshop.png">
+  </a>
+  <div class="nav-items">
+    <a class="text-dark" [routerLink]="['/cart/']">
+      <i class="fa fa-shopping-cart mr-3 fa-2x"></i>
+    </a>
+    <div ngbDropdown placement="bottom-right" class="d-inline-block" *ngIf="username">
+      <i class="fa fa-user-circle-o user-dropdown" ngbDropdownToggle></i>
+      <div ngbDropdownMenu>
+        <a [routerLink]="'/customer/profile/'" class="dropdown-item cursor-pointer" ngbDropdownItem>
+          My Profile</a>
+        <a [routerLink]="'/orders/'" class="dropdown-item cursor-pointer" ngbDropdownItem>
+          My Orders</a>
+        <a href="/customer/logout/" class="dropdown-item bg-red cursor-pointer" ngbDropdownItem>
+        <b>Logout</b></a>
+      </div>
+    </div>
+    <ng-container *ngIf="!username">
+      <button class="btn btn-light" [routerLink]="'/customer/login/'">Login</button>
+      <button class="ml-2 btn btn-primary" [routerLink]="'/customer/register/'">Register</button>
+    </ng-container>
+  </div>
+</div>
