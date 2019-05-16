@@ -1,0 +1,17 @@
+<div class="reviews-box" *ngIf="reviews">
+  <h4 class="mb-3">Reviews</h4>
+  <div *ngIf="!reviews.length">
+    No reviews to show
+  </div>
+  <ng-container *ngIf="reviews.length">
+    <div class="mb-2" *ngFor="let review of reviews">
+      <u>@{{review.customer.email}}</u>
+      <ngb-rating class="ml-3" [rate]="review.rating" [max]="5" [readonly]="true">
+        <ng-template let-fill="fill">
+          <span class="star" [class.filled]="fill===100">&#9733;</span>
+        </ng-template>
+      </ngb-rating>
+      <textarea class="form-control" disabled>{{review.review}}</textarea>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,107 @@
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-md-5 col-lg-4 col-xl-3 left-side-container">
+      <div class="box">
+        <div class="heading">
+          Search the Catalog
+          <i *ngIf="search.value || search.all_words" style="cursor: pointer"
+            class="fa fa-times-circle" (click)="removeSearch()"></i>
+        </div>
+        <div class="content">
+          <div class="mb-3">
+            <input style="width: 70%" [(ngModel)]="search.value" type="text">
+            <button class="ml-2" (click)="loadProducts(1)">Go</button>
+          </div>
+          <div class="mb-3">
+            <input id="all_words" type="checkbox" [(ngModel)]="search.all_words"> 
+            <label class="ml-1" for="all_words">Search for all words</label>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="heading">
+          Choose a Department
+          <i *ngIf="department" [routerLink]="'/products'"
+              class="fa fa-times-circle ml-1" style="cursor: pointer"></i>
+        </div>
+        <div class="content">
+          <div *ngFor="let dept of departments">
+            <a (click)="goToDepartment(dept)" style="cursor: pointer">
+              <u *ngIf="department && dept.name===department.name;else notActiveDepartment">{{dept.name}}</u>
+              <ng-template #notActiveDepartment>{{dept.name}}</ng-template>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="box" *ngIf="categories">
+        <div class="heading">
+          Choose a Category
+          <i *ngIf="category" [routerLink]="['../../../products']" 
+              class="fa fa-times-circle ml-1" style="cursor: pointer"></i>
+        </div>
+        <div class="content">
+          <div *ngFor="let cat of categories">
+            <a (click)="goToCategory(cat)" style="cursor: pointer">
+              <u *ngIf="category && cat.name===category.name;else notActiveCategory">{{cat.name}}</u>
+              <ng-template #notActiveCategory>{{cat.name}}</ng-template>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="box" *ngIf="isCartLoaded; else viewCartButton">
+        <div class="heading">Cart Summary</div>
+        <div class="content">
+          <ng-template #emptyCart>Your shopping cart is empty!</ng-template>
+          <ng-container *ngIf="cartItems && cartItems.length>0; else emptyCart">
+            <div class="item" *ngFor="let cartItem of cartItems">
+              {{cartItem.quantity}} X
+              <div class="ml-3">
+                {{cartItem.product.name}}<br>
+                <span *ngIf="getKeys(cartItem.attributes).length>0">
+                  {{joinAttributes(cartItem)}}</span>
+              </div>
+            </div>
+            <hr>
+            <strong>${{totalPrice()}}</strong> [ <a [routerLink]="['/cart/']">View Details</a> ]
+          </ng-container>
+        </div>
+      </div>
+      <ng-template #viewCartButton>
+        <div class="box border-none text-center">
+          <button (click)="viewCart()">View Cart</button>
+        </div>
+      </ng-template>
+    </div>
+    <div class="col-md-7 col-lg-8 col-xl-9">
+      <app-header></app-header>
+      <div *ngIf="department" class="breadcrumb-tshirtshop">
+        <div class="brick"></div>
+        <span>{{department.name}}</span>
+        <span class="ml-2" *ngIf="category"> >> {{category.name}}</span>
+      </div>
+      <ng-container *ngIf="searchUsed">
+        <h4><b>Search results</b></h4>
+        <div class="mt-1" *ngIf="!all_words"><i>Products containing <strong>any</strong> of these words: 
+          <strong>{{wordsAccepted.join(', ')}}</strong> </i></div>
+        <div class="mt-2" *ngIf="!all_words && wordsIgnored.length"><i>Ignored words: 
+          <strong>{{wordsIgnored.join(', ')}}</strong> </i></div>
+      </ng-container>
+      <div class="container">
+        <div class="row">
+          <div class="mt-2 col-12" *ngIf="pages && pages.length>1">
+            <span class="mr-2 cursor-pointer" (click)="loadProducts(currentPage-1)" *ngIf="currentPage!=1"><u><< Previous Page</u></span>
+            <ng-container *ngFor="let page of pages">
+              <span [ngClass]="{'ml-2': page!=1, 'cursor-pointer': true}" (click)="loadProducts(page)" 
+                *ngIf="currentPage!=page"><u>{{page}}</u></span>
+              <span [ngClass]="{'ml-2': page!=1}" *ngIf="currentPage==page">{{page}}</span>
+            </ng-container>
+            <span (click)="loadProducts(currentPage+1)" *ngIf="currentPage!=pages.length" class="ml-2 cursor-pointer"><u>Next Page >></u></span>
+          </div>
+          <div class="mt-4 col-12 col-lg-6" *ngFor="let product of products">
+            <app-product [product]="product" [isCartLoaded]="isCartLoaded"></app-product>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

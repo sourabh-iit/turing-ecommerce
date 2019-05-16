@@ -1,0 +1,188 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.left-side-container {
+  .box{
+    border: 1px solid gray;
+    margin-top: 2rem;
+    .heading{
+      padding: 5px;
+      color: white;
+      background: gray;
+      font-weight: 600;
+    }
+    .content{
+      padding: 15px;
+      .item{
+        display: flex;
+      }
+    }
+  }
+}
+.border-none{
+  border: none!important;
+}
+.active{
+  text-decoration: underline;
+}
+.logo{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: end;
+}
+.product-short{
+  .heading{
+    .brick{
+      width: 10px;
+      height: 1rem;
+      background: brown;
+      display: inline-block;
+      margin-right: 5px;
+    }
+    .text{
+      font-weight: 600;
+      font-size: 1rem;
+      color: #5b7e80;
+    }
+  }
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.breadcrumb-tshirtshop{
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  .brick{
+    width: 1rem;
+    height: 1.5rem;
+    background: brown;
+    margin-right: 1rem;
+  }
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .user-dropdown{
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
+.login{
+  display: flex;
+  justify-content: center;
+  form{
+    width: 500px;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: aliceblue;
+    .submit{
+      text-align: center;
+    }
+  }
+}
+.profile{
+  display: flex;
+  justify-content: center;
+  form{
+    max-width: 600px;
+    margin-top: 2rem;
+    background: aliceblue;
+    width: 100%;
+    padding: 1rem;
+    .submit{
+      text-align: center;
+    }
+  }
+}
+.product{
+  .heading{
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    .brick{
+      height: 2rem;
+      width: 1rem;
+      margin-right: 0.5rem;
+      background: brown;
+    }
+  }
+  .content{
+    .description{
+      font-weight: 600;
+      margin-top: 1rem;
+    }
+  }
+}
+.checkout-progress-bar{
+  list-style: none;
+  padding: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  li{
+    display: table-cell;
+    text-align: center;
+    position: relative;
+    &:before{
+      display: block;
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #e0d7d7;
+      border-radius: 50%;
+      margin: 0 auto 4px;
+    }
+    &:after{
+      display: block;
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      z-index: -1;
+      content: '';
+      background: #e0d7d7;
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    &.is-active{
+      color: #dc3545;
+      &:before{
+        background: #dc3545;
+      }
+      &:after{
+        background: #dc3545;
+      }
+      &.is-last{
+        &:after{
+          background: #e0d7d7;
+        }
+      }
+    }
+  }
+}
+.reviews-box{
+  border: 1px solid #dcd6d6;
+  padding: 1rem;
+}
+.star {
+  font-size: 1.5rem;
+  color: #b0c4de;
+}
+.filled{
+  color: red;
+}
+
+
+#toast-container > div {
+  opacity:1;
+}

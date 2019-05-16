@@ -1,0 +1,35 @@
+{% load static %}
+<!--[if IE 9]>         <html class="no-js ie9"> <![endif]-->
+<!--[if IE 10]>        <html class="no-js ie10"> <![endif]-->
+<!--[if gt IE 10]><!--><html class="no-js"> <!--<![endif]-->
+<head lang="en">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>TShirtShop {% block title %}{% endblock %}</title>
+
+    <meta name="viewport" content="initial-scale=1.0,width=device-width">
+
+    <link rel="stylesheet" href="{% static 'generated/styles.css' %}">
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class=" {% block body_class %}{% endblock %}">
+    {% block body %}{% endblock %}
+
+    <script type="text/javascript" charset="utf-8">
+        var STATIC_URL = "{% static '' %}";
+        var BASE_URL = "{{BASE_URL}}";
+        var user = "{{user.username}}";
+    </script>
+
+    <script type="text/javascript" src="{% static 'generated/runtime.js' %}"></script>
+    <script type="text/javascript" src="{% static 'generated/polyfills.js' %}"></script>
+    <script type="text/javascript" src="{% static 'generated/scripts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'generated/vendor.js' %}"></script>
+    <script type="text/javascript" src="{% static 'generated/main.js' %}"></script>
+
+    {% block pagebottom %}{% endblock %}
+
+</body>
