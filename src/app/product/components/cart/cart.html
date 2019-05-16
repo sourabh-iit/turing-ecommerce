@@ -1,0 +1,92 @@
+<div class="container cart">
+  <div class="row">
+    <app-header class="col-12"></app-header>
+    <div *ngIf="user" class="col-12">
+      {{user.email}} <hr>
+    </div>
+    <h4 class="col-12 mb-2 mt-5">Your Shopping Cart</h4>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Options</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngIf="!getItems(true).length; else checkoutItems">
+          <th>No item to display</th>
+        </tr>
+        <ng-template #checkoutItems>
+          <tr *ngFor="let item of getItems(true)">
+            <th scope="row">{{item.product.name}}</th>
+            <td>{{joinAttributes(item)}}</td>
+            <td>
+              <input type="number" [(ngModel)]="item.quantity" 
+                style="width: 80px" name="quantity">
+            </td>
+            <td>${{getPrice(item)}}</td>
+            <td>
+              <div (click)="saveForLater(item)" class="cursor-pointer"><u>Save for later</u></div>
+              <div (click)="removeItem(item)" class="mt-2 cursor-pointer"><u>Remove</u></div>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>
+              <button (click)="updateCart()">Update</button>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="3" style="text-align: right">
+              <div class="mt-2">Subtotal:</div>
+            </td>
+            <td style="text-align: right">
+              <div class="mt-2">${{totalPrice()}} USD</div>
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td colspan="5" style="text-align: right">
+              <a class="btn btn-secondary mt-3 mr-5" [routerLink]="['/checkout/']">Proceed to checkout</a>
+            </td>
+          </tr>
+        </ng-template>
+      </tbody>
+    </table>
+    <div class="col-12">
+      <hr>
+      <h4 class="mt-5 mb-2">Saved products to buy later</h4>
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Options</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="!getItems(false).length">
+            <th>No item to display</th>
+          </tr>
+          <tr *ngFor="let item of getItems(false)">
+            <th scope="row">{{item.product.name}}</th>
+            <td>{{joinAttributes(item)}}</td>
+            <td>
+              <div (click)="moveToCart(item)" class="cursor-pointer"><u>Move to cart</u></div>
+              <div (click)="removeItem(item)" class="mt-2 cursor-pointer"><u>Remove</u></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12">
+      <button [routerLink]="'/'">Continue Shopping</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+  <app-header></app-header>
+  <div class="product" *ngIf="product">
+    <div class="heading">
+      <div class="brick"></div>
+      <span class="text">{{product.name}}</span>
+    </div>
+    <div class="content mt-2">
+      <div class="row">
+        <div class="col-12">
+          <img [src]="STATIC_URL+'images/product_images/'+product.image">
+          <img [src]="STATIC_URL+'images/product_images/'+product.image_2" class="ml-2">
+        </div>
+        <div class="col-12 description">
+          <div><i>{{product.description}}</i></div>
+        </div>
+        <div class="col-12">
+          <div class="mt-2">Price: <b>
+            <ng-container *ngIf="product.discounted_price>0; else originalPrice">
+              <del>${{product.price}}</del> ${{product.discounted_price}}
+            </ng-container>
+            <ng-template #originalPrice>${{product.price}}</ng-template></b>
+          </div>
+        </div>
+        <div class="col-12">
+          <ng-container *ngFor="let attribute_name of getKeys(product.attributes)">
+            <div class="row">
+              <div class="col-6">
+              </div>
+            </div>
+          </ng-container>
+        </div>
+        <div class="col-12">
+          <button class="mt-2" (click)="addToCart()">Add to cart</button>
+        </div>
+        <div class="col-12 mt-3">
+          <button class="btn btn-sm btn-info" *ngIf="!reviews" (click)="loadReviews()">Load reviews</button>
+          <app-reviews *ngIf="reviews" [reviews]="reviews"></app-reviews>
+        </div>
+        <div class="col-12 mt-3">
+          <a [routerLink]="'/'"><u>Continue Shopping</u></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

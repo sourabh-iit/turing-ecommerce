@@ -1,0 +1,196 @@
+<ng-template #loadingbar>
+  <div>
+    <ul class="checkout-progress-bar">
+      <li [ngClass]="{'is-active': order.status>=0, 'is-last': order.status==0}">Delivery</li>
+      <li [ngClass]="{'is-active': order.status>=1, 'is-last': order.status==1}">Confirmation</li>
+      <li [ngClass]="{'is-active': order.status>=2, 'is-last': order.status==2}">Payment</li>
+      <li [ngClass]="{'is-active': order.status>=3, 'is-last': order.status==3}">Finish</li>
+    </ul>
+  </div>
+</ng-template>
+
+<div class="container">
+  <div class="row" *ngIf="order">
+    <app-header class="col-12"></app-header>
+    <div class="col-12 mb-3">
+      <h2 class="col-12 mb-3">Checkout</h2>
+      <ng-container *ngTemplateOutlet="loadingbar"></ng-container>
+    </div>
+    <ng-container *ngIf="order.status===0">
+      <form class="col-12" [formGroup]="deliveryForm">
+        <div class="row">
+          <div class="form-group col-6">
+            <label for="first_name">First Name*</label>
+            <input type="text" class="form-control" formControlName="first_name" id="first_name">
+          </div>
+          <div class="form-group col-6">
+            <label for="last_name">Last Name*</label>
+            <input type="text" formControlName="last_name" class="form-control" id="last_name">
+          </div>
+          <div class="form-group col-6">
+            <label for="address_1">Address 1*</label>
+            <input type="text" formControlName="address_1" class="form-control" id="address_1">
+          </div>
+          <div class="form-group col-6">
+            <label for="address_2">Address 2*</label>
+            <input type="text" formControlName="address_2" class="form-control" id="address_2">
+          </div>
+          <div class="form-group col-6">
+            <label for="region">Region*</label>
+            <input type="text" formControlName="region" class="form-control" id="region">
+          </div>
+          <div class="form-group col-6">
+            <label for="city">City*</label>
+            <input type="text" formControlName="city" class="form-control" id="city">
+          </div>
+          <div class="form-group col-6">
+            <label for="zip_code">Zip Code*</label>
+            <input type="text" formControlName="postal_code" class="form-control" id="zip_code">
+          </div>
+          <div class="form-group col-6">
+            <label for="country">Country*</label>
+            <input type="text" formControlName="country" class="form-control" id="country">
+          </div>
+          <div class="form-group col-6">
+            <label for="shipping_region">Shipping Region*</label>
+            <select class="form-control" formControlName="shipping_region" id="country">
+              <option [value]="shipping_region.id" *ngFor="let shipping_region of shipping_regions">
+                {{shipping_region.shipping_region}}</option>
+            </select>
+          </div>
+          <hr class="col-12">
+          <h5 class="col-12">Delivery options</h5>
+          <div class="custom-control custom-radio col-6 mt-2" *ngFor="let shipping of shippings">
+            <input formControlName="shipping" [value]="shipping.id" type="radio"
+              class="custom-control-input" id="{{shipping.shipping_type}}" name="shipping">
+            <label class="custom-control-label" for="{{shipping.shipping_type}}">{{shipping.shipping_type}}</label>
+          </div>
+        </div>
+      </form>
+    </ng-container>
+    <ng-container *ngIf="order.status===1">
+      <h4 class="col-9">Order summary</h4>
+      <h4 class="col-3">Delivery</h4>
+      <div class="col-9">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Qty</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartItems">
+              <td>{{item.product.name}}</td>
+              <td>{{item.quantity}}</td>
+              <th>${{getPrice(item)}}</th>
+            </tr>
+          <tbody>
+        </table>
+      </div>
+      <div class="col-3" *ngIf="customer">
+        <h5 class="mb-3">Address</h5>
+        {{deliveryForm.get('address_1').value + ' ' + deliveryForm.get('address_2').value}}
+        <h5 class="mt-3 mb-3">Delivery options</h5>
+        {{getShipping().shipping_type}}
+      </div>
+      <hr class="col-12">
+      <table class="table col-9">
+        <thead class="thead-light">
+          <tr>
+            <td>Subtotal</td>
+            <td>Shipping</td>
+            <td>Grandtotal</td>
+          </tr>
+        </thead>
+        <tbody>
+          <th>${{totalPrice()}}</th>
+          <th>${{getShipping().shipping_cost}}</th>
+          <th>${{grandTotal()}}</th>
+        </tbody>
+      </table>
+    </ng-container>
+    <ng-container *ngIf="order.status===2">
+      <div class="col-12 mt-5 mb-5">
+        <form [formGroup]="paymentForm">
+          <div class="row">
+            <div class="col-6 form-group">
+              <label for="card_holder_name">Card holder's name</label>
+              <input id="card_holder_name" class="form-control" formControlName="name">
+            </div>
+            <div class="col-6 form-group">
+              <label for="credit_card">Card number</label>
+              <input id="credit_card" placeholder="**** **** **** ****" 
+                class="form-control" formControlName="credit_card">
+              <div class="alert alert-danger" 
+                *ngIf="paymentForm.get('credit_card').invalid && (paymentForm.get('credit_card').touched || paymentForm.get('credit_card').dirty)">
+                <div *ngIf="paymentForm.get('credit_card').errors.required">
+                  Card number is required
+                </div>
+                <div *ngIf="paymentForm.get('credit_card').errors.pattern">
+                  Card number is invalid
+                </div>
+              </div>
+            </div>
+            <div class="col-3 form-group">
+              <label for="credit_card">Valid thru</label>
+              <div class="input-group">
+                <input id="credit_card" class="form-control" placeholder="MM/YY" 
+                  ngbDatepicker #d="ngbDatepicker" formControlName="expiry_date">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
+                    <i class="fa fa-calendar"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="alert alert-danger" 
+                *ngIf="paymentForm.get('expiry_date').invalid && (paymentForm.get('expiry_date').touched || paymentForm.get('expiry_date').dirty)">
+                <div *ngIf="paymentForm.get('expiry_date').errors.required">
+                  Expiry date is required
+                </div>
+                <div *ngIf="paymentForm.get('expiry_date').errors.invalid">
+                  Expiry date is invalid
+                </div>
+              </div>
+            </div>
+            <div class="col-3 form-group">
+              <label for="cvv">CVV/CVC*</label>
+              <input id="cvv" class="form-control" formControlName="cvv">
+              <div class="alert alert-danger" *ngIf="paymentForm.get('cvv').invalid && (paymentForm.get('cvv').touched || paymentForm.get('cvv').dirty)">
+                <div *ngIf="paymentForm.get('cvv').errors.required">
+                  CVV or CVC is required
+                </div>
+                <div *ngIf="paymentForm.get('cvv').errors.pattern">
+                  CVV or CVC is invalid
+                </div>
+              </div>
+            </div>
+            <div class="col-6 mt-4">
+              <small>*CVV or CVCis the card security code unique three digit number 
+                on the back of your card separate from this number.</small>
+            </div>
+          </div>
+        </form>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="order.status===3">
+      <div class="col-12 text-center mb-3">
+        <i class="fa fa-check-circle text-success mb-3" style="font-size: 4rem;"></i>
+        <h2>Success!</h2>
+        Your items will be shipped shortly,<br>
+        you will get email with details.
+      </div>
+    </ng-container>
+    <div class="col-12 mt-3 bg-light p-3 d-flex" 
+      [ngClass]="{'justify-content-between': order.status!==3, 'justify-content-center': order.status===3}">
+      <button class="btn btn-danger" *ngIf="order.status!==3" (click)="back()">Back</button>
+      <button class="btn btn-success" *ngIf="order.status===1 || order.status===0" 
+        [disabled]="!formValid()" (click)="order.status=order.status+1">Next Step</button>
+      <button class="btn btn-success" *ngIf="order.status===2" 
+        [disabled]="!formValid()" (click)="pay()">Pay</button>
+      <a class="btn btn-danger" *ngIf="order.status===3" 
+        [routerLink]="['/']">Back to shop</a>
+    </div>
+  </div>
+</div>

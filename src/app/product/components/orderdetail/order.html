@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row" *ngIf="order">
+    <app-header class="col-12"></app-header>
+    <h4 class="col-12 mb-3 mt-3">Order Details</h4>
+    <table class="col-12 table">
+      <thead>
+        <tr>
+          <th>Product name</th>
+          <th>Options</th>
+          <th>Quantity</th>
+          <th>Amount</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order_detail of order.order_details">
+          <td>{{order_detail.product.name}}</td>
+          <td>{{joinAttributes(order_detail)}}</td>
+          <td>{{order_detail.quantity}}</td>
+          <td>${{(order_detail.unit_cost*order_detail.quantity).toFixed(2)}}</td>
+          <td>
+            <a [routerLink]="['/',order_detail.product.name.split(' ').join('-'),'write-review',order_detail.id]">
+              Rate and Review</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr class="col-12">
+    <div class="col-4">Status: <b>{{order.status | statusText}}</b></div>
+    <div class="col-4">Shipped on: <b>{{shippedOn(order.shipped_on)}}</b></div>
+    <div class="col-4">Total amount: <b>${{order.total_amount}}</b></div>
+  </div>
+</div>
