@@ -6,18 +6,18 @@ import * as fromRoot from '../../../core/reducers';
 import * as fromProduct from '../../reducers';
 import * as productActions from '../../actions';
 import * as userActions from '../../../core/actions/user';
-import { ToastrService } from 'ngx-toastr';
 import { Router, ActivatedRoute } from '@angular/router';
 import { CustomerService } from 'src/app/customer/services/customer';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { getPrice, totalPrice } from 'src/app/shared/utils';
+import {StripeCheckoutLoader, StripeCheckoutHandler} from 'ng-stripe-checkout';
 
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.html'
 })
-export class CheckoutComponent implements OnInit, OnDestroy {
+export class CheckoutComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public shippings: Shipping[];
   public shipping_regions: Array<{id: number; shipping_region: string;}>;
@@ -41,7 +41,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   public cartItems: CartItem[];
   public paymentForm: FormGroup = this.builder.group({
     name: ['', Validators.required],
-    card_number: ['', [Validators.required, Validators.pattern('^[0-9]{16}$')]],
+    credit_card: ['', [Validators.required, Validators.pattern('^[0-9]{16}$')]],
     cvv: ['', [Validators.required, Validators.pattern('^[0-9]{3}$')]],
     expiry_date: ['', [Validators.required, (control: AbstractControl): {[key: string]: any} | null => {
         let today = new Date(Date.now());
@@ -54,37 +54,44 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     ]
   });
   public getPrice;
+  public _shippings;
 
   private observers;
+  private stripeCheckoutHandler: StripeCheckoutHandler;
 
   constructor(
     private productService: ProductService,
     private customerService: CustomerService,
     private appSettings: AppSettings,
     private store: Store<fromRoot.AppState>,
-    private toastr: ToastrService,
     private router: Router,
     private route: ActivatedRoute,
-    private builder: FormBuilder
+    private builder: FormBuilder,
+    private stripeCheckoutLoader: StripeCheckoutLoader
   ) {
-    this.store.select(fromProduct.selectAllCartItems).subscribe((items: CartItem[]) => {
+    this.observers = this.store.select(fromProduct.selectAllCartItems).subscribe((items: CartItem[]) => {
       this.cartItems = items;
+      if(!this.cartItems || !this.cartItems.length && this.order.status!=3){
+        this.router.navigate(['/cart/'], {relativeTo: this.route});
+      }
     });
     this.store.dispatch(new productActions.LoadCartItems({}));
-    if(!this.appSettings.isLoggedIn)
+    if(!this.appSettings.isLoggedIn){
+      this.appSettings.navigateToCheckOut = true;
       this.router.navigate(['/customer/login/'],{relativeTo: this.route});
+    }
     this.getPrice = getPrice;
   }
 
   ngOnInit(){
-    forkJoin(
+    this.observers.add(forkJoin(
       this.productService.loadShippings(),
       this.customerService.getShippingRegions()
     ).subscribe((data: any) => {
       if(data){
         this.shippings = data[0];
         this.shipping_regions = data[1];
-        this.store.select(fromRoot.selectorUser).subscribe((cust: Customer)=>{
+        this.observers.add(this.store.select(fromRoot.selectorUser).subscribe((cust: Customer)=>{
           if(cust){
             this.customer = cust;
             const values = {
@@ -100,32 +107,90 @@ export class CheckoutComponent implements OnInit, OnDestroy {
               shipping_region: this.customer.shipping_region?this.customer.shipping_region:this.shipping_regions[0].id
             }
             this.deliveryForm.setValue(values);
-            this.paymentForm.get('card_number').setValue(this.customer.credit_card);
+            this.paymentForm.get('credit_card').setValue(this.customer.credit_card);
           }
-        });
+        }));
       }
-    });
+    }));
     this.deliveryForm.get('shipping').valueChanges.subscribe((value: number) => {
       this.order.shipping = value;
     });
-    this.paymentForm.get('card_number').valueChanges.subscribe((value: string) => {
+    this.deliveryForm.get('first_name').valueChanges.subscribe((value: string) => {
+      this.customer.user.first_name = value;
+    });
+    this.deliveryForm.get('last_name').valueChanges.subscribe((value: string) => {
+      this.customer.user.last_name = value;
+    });
+    this.deliveryForm.get('city').valueChanges.subscribe((value: string) => {
+      this.customer.city = value;
+    });
+    this.deliveryForm.get('postal_code').valueChanges.subscribe((value: string) => {
+      this.customer.postal_code = value;
+    });
+    this.deliveryForm.get('country').valueChanges.subscribe((value: string) => {
+      this.customer.country = value;
+    });
+    this.deliveryForm.get('region').valueChanges.subscribe((value: string) => {
+      this.customer.region = value;
+    });
+    this.deliveryForm.get('address_1').valueChanges.subscribe((value: string) => {
+      this.customer.address_1 = value;
+    });
+    this.deliveryForm.get('address_2').valueChanges.subscribe((value: string) => {
+      this.customer.address_2 = value;
+    });
+    this.deliveryForm.get('shipping_region').valueChanges.subscribe((value: any) => {
+      this.customer.shipping_region = value;
+      if(value){
+        this._shippings = this.shippings.filter((s:Shipping)=>s.shipping_region.id==value);
+        this.deliveryForm.get('shipping').setValue(this._shippings[0].id);
+      }
+    });
+    this.paymentForm.get('credit_card').valueChanges.subscribe((value: string) => {
       this.customer.credit_card = value;
     });
   }
 
-  ngOnDestroy() {
+  ngAfterViewInit(){
+    this.stripeCheckoutLoader.createHandler({
+      key: this.appSettings.STRIPE_API_KEY
+    }).then((handler: StripeCheckoutHandler) => {
+      this.stripeCheckoutHandler = handler;
+    });
+  }
 
+  ngOnDestroy() {
+    this.observers.unsubscribe();
   }
 
   pay(){
-    forkJoin(
-      this.customerService.saveProfile(this.customer),
-      this.productService.createOrder(this.order)
-    ).subscribe((data: any) => {
-      this.store.dispatch(new userActions.UpdateUser(data[0]));
-      this.order = data[1];
-      this.store.dispatch(new productActions.EmptyCart({}));
+    this.order.status = 2;
+    this.stripeCheckoutHandler.open({
+      amount: parseFloat(this.grandTotal())*100,
+      email: this.customer.user.email,
+      currency: 'USD',
+      name: this.customer.user.first_name+' '+this.customer.user.last_name
+    }).then((token)=>{
+      this.observers.add(this.productService.createOrder({token: token.id, order: this.order}).subscribe((data: Order)=>{
+        this.order = data;
+        this.store.dispatch(new productActions.EmptyCart({}));
+      }, (error) => {
+        this.order.status = 1;
+        throw(error);
+      }));
+    }, (error)=>{
+      if(error!='stripe_closed'){
+        console.log(error);
+      }
+      this.order.status = 1;
     });
+  }
+
+  next(){
+    this.observers.add(this.customerService.saveProfile(this.customer).subscribe((data)=>{
+      this.store.dispatch(new userActions.UpdateUser(data));
+      this.order.status = 1;
+    }));
   }
 
   back(){

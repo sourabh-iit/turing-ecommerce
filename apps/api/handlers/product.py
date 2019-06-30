@@ -4,6 +4,8 @@ from django.db.models import Q
 from django.core.exceptions import ValidationError
 from django.core.cache import cache
 from django.http import HttpResponseForbidden
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 
 from apps.product.models import Product, Department, Category, ProductCategory, Review
 from apps.order.models import OrderDetail
@@ -15,9 +17,18 @@ import json
 product_chache_time = 60 * 60 * 12
 
 
+def products_cache_key(department, category):
+  return f'{department}/{category}-products'
+
+def product_cache_key(id):
+  return f'{id}-product'
+
+def product_reviews_cache_key(id):
+  return f'{id}-reviews'
+
+
 class ProductListHandler(APIView, PaginationBase):
   def get(self, request, department='', category=''):
-    path = request.path
     search = json.loads(request.GET['search'])
     words = search['value'].split(' ')
     q = Q()
@@ -28,7 +39,7 @@ class ProductListHandler(APIView, PaginationBase):
     if len(words)>0:
       if search['all_words']:
         for word in words:
-          q &= Q(name__contains=word) | Q(description__contains=word)
+          q &= Q(name__icontains=word) | Q(description__icontains=word)
           q1 &= Q(product__name__icontains=word) | Q(product__description__icontains=word)
       else:
         for word in words:
@@ -36,13 +47,14 @@ class ProductListHandler(APIView, PaginationBase):
             wordsAccepted.append(word)
           else:
             wordsIgnored.append(word)
-          q |= Q(name__contains=word) | Q(description__contains=word)
+          q |= Q(name__icontains=word) | Q(description__icontains=word)
           q1 |= Q(product__name__icontains=word) | Q(product__description__icontains=word)
         context['wordsAccepted'] = wordsAccepted
         context['wordsIgnored'] = wordsIgnored
     
-    if len(words)==0 and cache.get(path):
-      products = cache.get(path)
+    cache_key = products_cache_key(department, category)
+    if len(words)==0 and cache.get(cache_key):
+      products = cache.get(cache_key)
     else:
       if department=='' and category=='':
         products = Product.objects.filter(q)
@@ -56,7 +68,7 @@ class ProductListHandler(APIView, PaginationBase):
         products = []
         for product_category in product_categories:
           products.append(product_category.product)
-        cache.set(path, products, product_chache_time)
+      cache.set(cache_key, products)
     
     page = self.paginate_queryset(products)
     if page is not None:
@@ -68,26 +80,33 @@ class ProductListHandler(APIView, PaginationBase):
 
 class ProductHandler(APIView):
   def get(self, request, product_id):
-    try:
-      product = Product.objects.get(id=product_id)
-      return Response(ProductSerializer(product).data)
-    except:
-      raise ValidationError('Product does not exist')
+    cache_key = product_cache_key(product_id)
+    if cache.get(cache_key):
+      data = cache.get(cache_key)
+    else:
+      try:
+        product = Product.objects.get(id=product_id)
+      except:
+        raise ValidationError('Product does not exist')
+      data = ProductSerializer(product).data
+      cache.set(cache_key, data)
+    return Response(data)
 
 
 class ReviewListHandler(APIView):
   def get(self, request, product_id):
-    path = request.path
-    try:
-      if cache.get(path):
-        reviews = cache.get(path)
-      else:
+    cache_key = product_reviews_cache_key(product_id)
+    if cache.get(cache_key):
+      data = cache.get(cache_key)
+    else:
+      try:
         product = Product.objects.get(id=product_id)
         reviews = product.reviews.all()
-        cache.set(path, reviews, 60*60*2)
-      return Response(ReviewSerializer(reviews, many=True).data)
-    except Product.DoesNotExist:
-      raise ValidationError('Product does not exist')
+        data = ReviewSerializer(reviews, many=True).data
+        cache.set(cache_key, data)
+      except Product.DoesNotExist:
+        raise ValidationError('Product does not exist')
+    return Response(data)
 
 
 class ReviewHandler(APIView):
@@ -109,6 +128,7 @@ class ReviewHandler(APIView):
         'rating': 0
       })
 
+  @method_decorator(login_required)
   def post(self, request, order_detail_id):
     try:
       order_detail = OrderDetail.objects.prefetch_related('order','product').get(id=order_detail_id)
@@ -129,6 +149,8 @@ class ReviewHandler(APIView):
       review.review = data['review']
       review.rating = data['rating']
       review.save()
+      # delete cache
+      cache.delete(product_cache_key(order_detail.product.id))
       return Response(ReviewSerializer(review).data)
     except OrderDetail.DoesNotExist:
       raise ValidationError('You cannot write review for this product')

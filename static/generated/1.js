@@ -1,1 +1,1672 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{IMJ5:function(l,n,u){"use strict";u.d(n,"a",function(){return t}),u("npEO"),u("oQel"),u("v5zc");var t=function(){return function(){}}()},JPcl:function(l,n,u){"use strict";u.d(n,"a",function(){return I});var t=u("CcnG"),r=u("Ip0R"),e=u("oir+"),o=u("7vj6"),i=u("yGQT"),s=u("5IsW"),a=u("gIcY"),b=u("npEO"),c=u("Xuwz"),d=u("ZYCi"),g=u("SZbH"),p=t.qb({encapsulation:2,styles:[],data:{}});function m(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Email address is required "]))],null,null)}function C(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Email address is not a valid email address "]))],null,null)}function f(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,4,"div",[["class","alert alert-danger"]],null,null,null,null,null)),(l()(),t.jb(16777216,null,null,1,null,m)),t.rb(2,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.jb(16777216,null,null,1,null,C)),t.rb(4,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,u.userForm.get("email").errors.required),l(n,4,0,u.userForm.get("email").errors.email)},null)}function h(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Password is required "]))],null,null)}function v(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,2,"div",[["class","alert alert-danger"]],null,null,null,null,null)),(l()(),t.jb(16777216,null,null,1,null,h)),t.rb(2,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null)],function(l,n){l(n,2,0,n.component.userForm.get("password").errors.required)},null)}function y(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,45,"div",[["class","container"]],null,null,null,null,null)),(l()(),t.sb(1,0,null,null,44,"div",[["class","row"]],null,null,null,null,null)),(l()(),t.sb(2,0,null,null,1,"app-header",[["class","col-12"]],null,null,null,e.b,e.a)),t.rb(3,114688,null,0,o.a,[i.n,s.a],null,null),(l()(),t.sb(4,0,null,null,41,"div",[["class","col-12 login"]],null,null,null,null,null)),(l()(),t.sb(5,0,null,null,40,"form",[["novalidate",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngSubmit"],[null,"submit"],[null,"reset"]],function(l,n,u){var r=!0,e=l.component;return"submit"===n&&(r=!1!==t.Cb(l,7).onSubmit(u)&&r),"reset"===n&&(r=!1!==t.Cb(l,7).onReset()&&r),"ngSubmit"===n&&(r=!1!==e.onSubmit()&&r),r},null,null)),t.rb(6,16384,null,0,a.w,[],null,null),t.rb(7,540672,null,0,a.g,[[8,null],[8,null]],{form:[0,"form"]},{ngSubmit:"ngSubmit"}),t.Hb(2048,null,a.c,null,[a.g]),t.rb(9,16384,null,0,a.m,[[4,a.c]],null,null),(l()(),t.sb(10,0,null,null,1,"h2",[["class","text-center"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Login"])),(l()(),t.sb(12,0,null,null,10,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(13,0,null,null,1,"label",[["for","email"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Email address"])),(l()(),t.sb(15,0,null,null,5,"input",[["class","form-control"],["formControlName","email"],["id","email"],["placeholder","Enter email"],["type","email"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,16)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,16).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,16)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,16)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(16,16384,null,0,a.d,[t.G,t.k,[2,a.a]],null,null),t.Hb(1024,null,a.j,function(l){return[l]},[a.d]),t.rb(18,671744,null,0,a.f,[[3,a.c],[8,null],[8,null],[6,a.j],[2,a.y]],{name:[0,"name"]},null),t.Hb(2048,null,a.k,null,[a.f]),t.rb(20,16384,null,0,a.l,[[4,a.k]],null,null),(l()(),t.jb(16777216,null,null,1,null,f)),t.rb(22,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.sb(23,0,null,null,10,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(24,0,null,null,1,"label",[["for","password"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Password"])),(l()(),t.sb(26,0,null,null,5,"input",[["class","form-control"],["formControlName","password"],["id","password"],["placeholder","Password"],["type","password"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,27)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,27).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,27)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,27)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(27,16384,null,0,a.d,[t.G,t.k,[2,a.a]],null,null),t.Hb(1024,null,a.j,function(l){return[l]},[a.d]),t.rb(29,671744,null,0,a.f,[[3,a.c],[8,null],[8,null],[6,a.j],[2,a.y]],{name:[0,"name"]},null),t.Hb(2048,null,a.k,null,[a.f]),t.rb(31,16384,null,0,a.l,[[4,a.k]],null,null),(l()(),t.jb(16777216,null,null,1,null,v)),t.rb(33,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.sb(34,0,null,null,8,"div",[["class","form-check"]],null,null,null,null,null)),(l()(),t.sb(35,0,null,null,5,"input",[["class","form-check-input"],["formControlName","remember"],["id","remember"],["type","checkbox"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"change"],[null,"blur"]],function(l,n,u){var r=!0;return"change"===n&&(r=!1!==t.Cb(l,36).onChange(u.target.checked)&&r),"blur"===n&&(r=!1!==t.Cb(l,36).onTouched()&&r),r},null,null)),t.rb(36,16384,null,0,a.b,[t.G,t.k],null,null),t.Hb(1024,null,a.j,function(l){return[l]},[a.b]),t.rb(38,671744,null,0,a.f,[[3,a.c],[8,null],[8,null],[6,a.j],[2,a.y]],{name:[0,"name"]},null),t.Hb(2048,null,a.k,null,[a.f]),t.rb(40,16384,null,0,a.l,[[4,a.k]],null,null),(l()(),t.sb(41,0,null,null,1,"label",[["class","form-check-label"],["for","remember"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Remember me"])),(l()(),t.sb(43,0,null,null,2,"div",[["class","submit"]],null,null,null,null,null)),(l()(),t.sb(44,0,null,null,1,"button",[["class","btn btn-primary mt-3"],["type","submit"]],[[8,"disabled",0]],null,null,null,null)),(l()(),t.Kb(-1,null,["Login"]))],function(l,n){var u=n.component;l(n,3,0),l(n,7,0,u.userForm),l(n,18,0,"email"),l(n,22,0,u.userForm.get("email").invalid&&(u.userForm.get("email").dirty||u.userForm.get("email").touched)),l(n,29,0,"password"),l(n,33,0,u.userForm.get("password").invalid&&(u.userForm.get("password").dirty||u.userForm.get("password").touched)),l(n,38,0,"remember")},function(l,n){var u=n.component;l(n,5,0,t.Cb(n,9).ngClassUntouched,t.Cb(n,9).ngClassTouched,t.Cb(n,9).ngClassPristine,t.Cb(n,9).ngClassDirty,t.Cb(n,9).ngClassValid,t.Cb(n,9).ngClassInvalid,t.Cb(n,9).ngClassPending),l(n,15,0,t.Cb(n,20).ngClassUntouched,t.Cb(n,20).ngClassTouched,t.Cb(n,20).ngClassPristine,t.Cb(n,20).ngClassDirty,t.Cb(n,20).ngClassValid,t.Cb(n,20).ngClassInvalid,t.Cb(n,20).ngClassPending),l(n,26,0,t.Cb(n,31).ngClassUntouched,t.Cb(n,31).ngClassTouched,t.Cb(n,31).ngClassPristine,t.Cb(n,31).ngClassDirty,t.Cb(n,31).ngClassValid,t.Cb(n,31).ngClassInvalid,t.Cb(n,31).ngClassPending),l(n,35,0,t.Cb(n,40).ngClassUntouched,t.Cb(n,40).ngClassTouched,t.Cb(n,40).ngClassPristine,t.Cb(n,40).ngClassDirty,t.Cb(n,40).ngClassValid,t.Cb(n,40).ngClassInvalid,t.Cb(n,40).ngClassPending),l(n,44,0,u.userForm.invalid)})}function _(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"app-login",[],null,null,null,y,p)),t.rb(1,245760,null,0,b.a,[s.a,a.e,c.a,d.o,d.a,g.j,i.n],null,null)],function(l,n){l(n,1,0)},null)}var I=t.ob("app-login",b.a,_,{},{},[])},Xuwz:function(l,n,u){"use strict";u.d(n,"a",function(){return t}),u("5IsW");var t=function(){function l(l,n){this.http=l,this.appSettings=n}return l.prototype.login=function(l){return this.http.post(this.appSettings.API_PREFIX+"customer/login",l)},l.prototype.register=function(l){return this.http.post(this.appSettings.API_PREFIX+"customer/register",l)},l.prototype.saveProfile=function(l){return this.http.put(this.appSettings.API_PREFIX+"customer/register",l)},l.prototype.getShippingRegions=function(){return this.http.get(this.appSettings.API_PREFIX+"shipping_regions")},l}()},YW76:function(l,n,u){"use strict";u.d(n,"a",function(){return w});var t=u("CcnG"),r=u("Ip0R"),e=u("oir+"),o=u("7vj6"),i=u("yGQT"),s=u("5IsW"),a=u("gIcY"),b=u("oQel"),c=u("Xuwz"),d=u("ZYCi"),g=u("SZbH"),p=t.qb({encapsulation:2,styles:[],data:{}});function m(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Email address is required "]))],null,null)}function C(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Email address is not a valid email address "]))],null,null)}function f(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,4,"div",[["class","alert alert-danger"]],null,null,null,null,null)),(l()(),t.jb(16777216,null,null,1,null,m)),t.rb(2,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.jb(16777216,null,null,1,null,C)),t.rb(4,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,u.registerForm.get("email").errors.required),l(n,4,0,u.registerForm.get("email").errors.email)},null)}function h(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Password is required "]))],null,null)}function v(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Password must be atleast 8 characters in length "]))],null,null)}function y(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,4,"div",[["class","alert alert-danger"]],null,null,null,null,null)),(l()(),t.jb(16777216,null,null,1,null,h)),t.rb(2,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.jb(16777216,null,null,1,null,v)),t.rb(4,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,u.registerForm.get("password").errors.required),l(n,4,0,u.registerForm.get("password").errors.minlength)},null)}function _(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"div",[["class","alert alert-danger"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,[" Password and Confirm Password does not match "]))],null,null)}function I(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,47,"div",[["class","container"]],null,null,null,null,null)),(l()(),t.sb(1,0,null,null,46,"div",[["class","row"]],null,null,null,null,null)),(l()(),t.sb(2,0,null,null,1,"app-header",[["class","col-12"]],null,null,null,e.b,e.a)),t.rb(3,114688,null,0,o.a,[i.n,s.a],null,null),(l()(),t.sb(4,0,null,null,43,"div",[["class","col-12 login"]],null,null,null,null,null)),(l()(),t.sb(5,0,null,null,42,"form",[["novalidate",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngSubmit"],[null,"submit"],[null,"reset"]],function(l,n,u){var r=!0,e=l.component;return"submit"===n&&(r=!1!==t.Cb(l,7).onSubmit(u)&&r),"reset"===n&&(r=!1!==t.Cb(l,7).onReset()&&r),"ngSubmit"===n&&(r=!1!==e.onSubmit()&&r),r},null,null)),t.rb(6,16384,null,0,a.w,[],null,null),t.rb(7,540672,null,0,a.g,[[8,null],[8,null]],{form:[0,"form"]},{ngSubmit:"ngSubmit"}),t.Hb(2048,null,a.c,null,[a.g]),t.rb(9,16384,null,0,a.m,[[4,a.c]],null,null),(l()(),t.sb(10,0,null,null,1,"h2",[["class","text-center"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Register"])),(l()(),t.sb(12,0,null,null,10,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(13,0,null,null,1,"label",[["for","email"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Email address"])),(l()(),t.sb(15,0,null,null,5,"input",[["class","form-control"],["formControlName","email"],["id","email"],["placeholder","Enter email"],["type","email"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,16)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,16).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,16)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,16)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(16,16384,null,0,a.d,[t.G,t.k,[2,a.a]],null,null),t.Hb(1024,null,a.j,function(l){return[l]},[a.d]),t.rb(18,671744,null,0,a.f,[[3,a.c],[8,null],[8,null],[6,a.j],[2,a.y]],{name:[0,"name"]},null),t.Hb(2048,null,a.k,null,[a.f]),t.rb(20,16384,null,0,a.l,[[4,a.k]],null,null),(l()(),t.jb(16777216,null,null,1,null,f)),t.rb(22,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.sb(23,0,null,null,10,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(24,0,null,null,1,"label",[["for","password"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Password"])),(l()(),t.sb(26,0,null,null,5,"input",[["class","form-control"],["formControlName","password"],["id","password"],["placeholder","Password"],["type","password"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,27)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,27).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,27)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,27)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(27,16384,null,0,a.d,[t.G,t.k,[2,a.a]],null,null),t.Hb(1024,null,a.j,function(l){return[l]},[a.d]),t.rb(29,671744,null,0,a.f,[[3,a.c],[8,null],[8,null],[6,a.j],[2,a.y]],{name:[0,"name"]},null),t.Hb(2048,null,a.k,null,[a.f]),t.rb(31,16384,null,0,a.l,[[4,a.k]],null,null),(l()(),t.jb(16777216,null,null,1,null,y)),t.rb(33,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.sb(34,0,null,null,10,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(35,0,null,null,1,"label",[["for","confirm_password"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Confirm Password"])),(l()(),t.sb(37,0,null,null,5,"input",[["class","form-control"],["formControlName","confirm_password"],["id","confirm_password"],["placeholder","Confirm Password"],["type","password"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,38)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,38).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,38)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,38)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(38,16384,null,0,a.d,[t.G,t.k,[2,a.a]],null,null),t.Hb(1024,null,a.j,function(l){return[l]},[a.d]),t.rb(40,671744,null,0,a.f,[[3,a.c],[8,null],[8,null],[6,a.j],[2,a.y]],{name:[0,"name"]},null),t.Hb(2048,null,a.k,null,[a.f]),t.rb(42,16384,null,0,a.l,[[4,a.k]],null,null),(l()(),t.jb(16777216,null,null,1,null,_)),t.rb(44,16384,null,0,r.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.sb(45,0,null,null,2,"div",[["class","submit"]],null,null,null,null,null)),(l()(),t.sb(46,0,null,null,1,"button",[["class","btn btn-primary mt-3"],["type","submit"]],[[8,"disabled",0]],null,null,null,null)),(l()(),t.Kb(-1,null,["Register"]))],function(l,n){var u=n.component;l(n,3,0),l(n,7,0,u.registerForm),l(n,18,0,"email"),l(n,22,0,u.registerForm.get("email").invalid&&(u.registerForm.get("email").dirty||u.registerForm.get("email").touched)),l(n,29,0,"password"),l(n,33,0,u.registerForm.get("password").invalid&&(u.registerForm.get("password").dirty||u.registerForm.get("password").touched)),l(n,40,0,"confirm_password"),l(n,44,0,(u.registerForm.get("confirm_password").dirty||u.registerForm.get("confirm_password").touched)&&(null==u.registerForm.errors?null:u.registerForm.errors.mismatch))},function(l,n){var u=n.component;l(n,5,0,t.Cb(n,9).ngClassUntouched,t.Cb(n,9).ngClassTouched,t.Cb(n,9).ngClassPristine,t.Cb(n,9).ngClassDirty,t.Cb(n,9).ngClassValid,t.Cb(n,9).ngClassInvalid,t.Cb(n,9).ngClassPending),l(n,15,0,t.Cb(n,20).ngClassUntouched,t.Cb(n,20).ngClassTouched,t.Cb(n,20).ngClassPristine,t.Cb(n,20).ngClassDirty,t.Cb(n,20).ngClassValid,t.Cb(n,20).ngClassInvalid,t.Cb(n,20).ngClassPending),l(n,26,0,t.Cb(n,31).ngClassUntouched,t.Cb(n,31).ngClassTouched,t.Cb(n,31).ngClassPristine,t.Cb(n,31).ngClassDirty,t.Cb(n,31).ngClassValid,t.Cb(n,31).ngClassInvalid,t.Cb(n,31).ngClassPending),l(n,37,0,t.Cb(n,42).ngClassUntouched,t.Cb(n,42).ngClassTouched,t.Cb(n,42).ngClassPristine,t.Cb(n,42).ngClassDirty,t.Cb(n,42).ngClassValid,t.Cb(n,42).ngClassInvalid,t.Cb(n,42).ngClassPending),l(n,46,0,u.registerForm.invalid)})}function k(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"app-register",[],null,null,null,I,p)),t.rb(1,245760,null,0,b.a,[s.a,a.e,c.a,d.o,d.a,g.j],null,null)],function(l,n){l(n,1,0)},null)}var w=t.ob("app-register",b.a,k,{},{},[])},d7gL:function(l,n,u){"use strict";u.d(n,"a",function(){return t});var t=function(){return function(){}}()},npEO:function(l,n,u){"use strict";u.d(n,"a",function(){return e}),u("5IsW");var t=u("gIcY"),r=(u("Xuwz"),u("cvo5")),e=function(){function l(l,n,u,r,e,o,i){this.appSettings=l,this.builder=n,this.customerService=u,this.router=r,this.route=e,this.toastr=o,this.store=i,this.userForm=this.builder.group({email:["",[t.t.required,t.t.email]],password:["",[t.t.required]],remember:[!1]}),this.STATIC_URL=this.appSettings.STATIC_URL}return l.prototype.ngOnInit=function(){this.appSettings.isLoggedIn&&this.router.navigate(["/"],{relativeTo:this.route})},l.prototype.ngOnDestroy=function(){},l.prototype.onSubmit=function(){var l=this;this.customerService.login(this.userForm.value).subscribe(function(n){l.store.dispatch(new r.b(n)),l.appSettings.isLoggedIn=!0,l.router.navigate(["/"],{relativeTo:l.route})})},l}()},oQel:function(l,n,u){"use strict";u.d(n,"a",function(){return e}),u("5IsW");var t=u("gIcY"),r=(u("Xuwz"),function(l){var n=l.get("password"),u=l.get("confirm_password");return n&&u&&n.value!==u.value?{mismatch:!0}:null}),e=function(){function l(l,n,u,e,o,i){this.appSettings=l,this.builder=n,this.customerService=u,this.router=e,this.route=o,this.toastr=i,this.registerForm=this.builder.group({email:["",[t.t.required,t.t.email]],password:["",[t.t.required,t.t.minLength(8)]],confirm_password:[""]},{validators:r}),this.STATIC_URL=this.appSettings.STATIC_URL}return l.prototype.ngOnInit=function(){this.appSettings.isLoggedIn&&this.router.navigate(["/"],{relativeTo:this.route})},l.prototype.ngOnDestroy=function(){},l.prototype.onSubmit=function(){var l=this;this.customerService.register(this.registerForm.value).subscribe(function(n){l.toastr.success("You are registered successfully with email address "+l.registerForm.get("email").value,"Registeration is successful"),l.router.navigate(["../login/"],{relativeTo:l.route})})},l}()},"oir+":function(l,n,u){"use strict";u.d(n,"a",function(){return i}),u.d(n,"b",function(){return b});var t=u("CcnG"),r=u("4GxJ"),e=u("Ip0R"),o=u("ZYCi"),i=(u("7vj6"),u("yGQT"),u("5IsW"),t.qb({encapsulation:2,styles:[],data:{}}));function s(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,17,"div",[["class","d-inline-block"],["ngbDropdown",""],["placement","bottom-right"]],[[2,"show",null]],null,null,null,null)),t.rb(1,212992,null,2,r.s,[t.h,r.u,e.d,t.C],{placement:[0,"placement"]},null),t.Ib(335544320,1,{_menu:0}),t.Ib(335544320,2,{_anchor:0}),(l()(),t.sb(4,0,null,null,2,"i",[["aria-haspopup","true"],["class","fa fa-user-circle-o user-dropdown dropdown-toggle"],["ngbDropdownToggle",""]],[[1,"aria-expanded",0]],[[null,"click"]],function(l,n,u){var r=!0;return"click"===n&&(r=!1!==t.Cb(l,5).toggleOpen()&&r),r},null,null)),t.rb(5,16384,null,0,r.x,[r.s,t.k],null,null),t.Hb(2048,[[2,4]],r.t,null,[r.x]),(l()(),t.sb(7,0,null,null,10,"div",[["ngbDropdownMenu",""]],[[2,"dropdown-menu",null],[2,"show",null],[1,"x-placement",0]],null,null,null,null)),t.rb(8,16384,[[1,4]],0,r.v,[r.s,t.k,t.G],null,null),(l()(),t.sb(9,0,null,null,2,"a",[["class","dropdown-item cursor-pointer"],["ngbDropdownItem",""]],[[1,"target",0],[8,"href",4]],[[null,"click"]],function(l,n,u){var r=!0;return"click"===n&&(r=!1!==t.Cb(l,10).onClick(u.button,u.ctrlKey,u.metaKey,u.shiftKey)&&r),r},null,null)),t.rb(10,671744,null,0,o.q,[o.o,o.a,e.j],{routerLink:[0,"routerLink"]},null),(l()(),t.Kb(-1,null,[" My Profile"])),(l()(),t.sb(12,0,null,null,2,"a",[["class","dropdown-item cursor-pointer"],["ngbDropdownItem",""]],[[1,"target",0],[8,"href",4]],[[null,"click"]],function(l,n,u){var r=!0;return"click"===n&&(r=!1!==t.Cb(l,13).onClick(u.button,u.ctrlKey,u.metaKey,u.shiftKey)&&r),r},null,null)),t.rb(13,671744,null,0,o.q,[o.o,o.a,e.j],{routerLink:[0,"routerLink"]},null),(l()(),t.Kb(-1,null,[" My Orders"])),(l()(),t.sb(15,0,null,null,2,"a",[["class","dropdown-item bg-red cursor-pointer"],["href","/customer/logout/"],["ngbDropdownItem",""]],null,null,null,null,null)),(l()(),t.sb(16,0,null,null,1,"b",[],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Logout"]))],function(l,n){l(n,1,0,"bottom-right"),l(n,10,0,"/customer/profile/"),l(n,13,0,"/orders/")},function(l,n){l(n,0,0,t.Cb(n,1).isOpen()),l(n,4,0,t.Cb(n,5).dropdown.isOpen()),l(n,7,0,!0,t.Cb(n,8).dropdown.isOpen(),t.Cb(n,8).placement),l(n,9,0,t.Cb(n,10).target,t.Cb(n,10).href),l(n,12,0,t.Cb(n,13).target,t.Cb(n,13).href)})}function a(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,6,null,null,null,null,null,null,null)),(l()(),t.sb(1,0,null,null,2,"button",[["class","btn btn-light"]],null,[[null,"click"]],function(l,n,u){var r=!0;return"click"===n&&(r=!1!==t.Cb(l,2).onClick()&&r),r},null,null)),t.rb(2,16384,null,0,o.p,[o.o,o.a,[8,null],t.G,t.k],{routerLink:[0,"routerLink"]},null),(l()(),t.Kb(-1,null,["Login"])),(l()(),t.sb(4,0,null,null,2,"button",[["class","ml-2 btn btn-primary"]],null,[[null,"click"]],function(l,n,u){var r=!0;return"click"===n&&(r=!1!==t.Cb(l,5).onClick()&&r),r},null,null)),t.rb(5,16384,null,0,o.p,[o.o,o.a,[8,null],t.G,t.k],{routerLink:[0,"routerLink"]},null),(l()(),t.Kb(-1,null,["Register"]))],function(l,n){l(n,2,0,"/customer/login/"),l(n,5,0,"/customer/register/")},null)}function b(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,12,"div",[["class","header mb-4 mt-2"]],null,null,null,null,null)),(l()(),t.sb(1,0,null,null,2,"a",[],[[1,"target",0],[8,"href",4]],[[null,"click"]],function(l,n,u){var r=!0;return"click"===n&&(r=!1!==t.Cb(l,2).onClick(u.button,u.ctrlKey,u.metaKey,u.shiftKey)&&r),r},null,null)),t.rb(2,671744,null,0,o.q,[o.o,o.a,e.j],{routerLink:[0,"routerLink"]},null),(l()(),t.sb(3,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),t.sb(4,0,null,null,8,"div",[["class","nav-items"]],null,null,null,null,null)),(l()(),t.sb(5,0,null,null,3,"a",[["class","text-dark"]],[[1,"target",0],[8,"href",4]],[[null,"click"]],function(l,n,u){var r=!0;return"click"===n&&(r=!1!==t.Cb(l,6).onClick(u.button,u.ctrlKey,u.metaKey,u.shiftKey)&&r),r},null,null)),t.rb(6,671744,null,0,o.q,[o.o,o.a,e.j],{routerLink:[0,"routerLink"]},null),t.Db(7,1),(l()(),t.sb(8,0,null,null,0,"i",[["class","fa fa-shopping-cart mr-3 fa-2x"]],null,null,null,null,null)),(l()(),t.jb(16777216,null,null,1,null,s)),t.rb(10,16384,null,0,e.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null),(l()(),t.jb(16777216,null,null,1,null,a)),t.rb(12,16384,null,0,e.m,[t.R,t.O],{ngIf:[0,"ngIf"]},null)],function(l,n){var u=n.component;l(n,2,0,"/");var t=l(n,7,0,"/cart/");l(n,6,0,t),l(n,10,0,u.username),l(n,12,0,!u.username)},function(l,n){var u=n.component;l(n,1,0,t.Cb(n,2).target,t.Cb(n,2).href),l(n,3,0,t.ub(1,"",u.STATIC_URL,"images/images/tshirtshop.png")),l(n,5,0,t.Cb(n,6).target,t.Cb(n,6).href)})}},qdaB:function(l,n,u){"use strict";u.d(n,"a",function(){return h});var t=u("CcnG"),r=u("gIcY"),e=u("oir+"),o=u("7vj6"),i=u("yGQT"),s=u("5IsW"),a=u("Ip0R"),b=u("v5zc"),c=u("Xuwz"),d=u("ZYCi"),g=u("SZbH"),p=t.qb({encapsulation:2,styles:[],data:{}});function m(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,3,"option",[],null,null,null,null,null)),t.rb(1,147456,null,0,r.p,[t.k,t.G,[2,r.s]],{value:[0,"value"]},null),t.rb(2,147456,null,0,r.z,[t.k,t.G,[8,null]],{value:[0,"value"]},null),(l()(),t.Kb(3,null,[" ",""]))],function(l,n){l(n,1,0,n.context.$implicit.id),l(n,2,0,n.context.$implicit.id)},function(l,n){l(n,3,0,n.context.$implicit.shipping_region)})}function C(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,124,"div",[["class","container"]],null,null,null,null,null)),(l()(),t.sb(1,0,null,null,123,"div",[["class","row"]],null,null,null,null,null)),(l()(),t.sb(2,0,null,null,1,"app-header",[["class","col-12"]],null,null,null,e.b,e.a)),t.rb(3,114688,null,0,o.a,[i.n,s.a],null,null),(l()(),t.sb(4,0,null,null,120,"div",[["class","col-12 profile"]],null,null,null,null,null)),(l()(),t.sb(5,0,null,null,119,"form",[["novalidate",""]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngSubmit"],[null,"submit"],[null,"reset"]],function(l,n,u){var r=!0,e=l.component;return"submit"===n&&(r=!1!==t.Cb(l,7).onSubmit(u)&&r),"reset"===n&&(r=!1!==t.Cb(l,7).onReset()&&r),"ngSubmit"===n&&(r=!1!==e.onSubmit()&&r),r},null,null)),t.rb(6,16384,null,0,r.w,[],null,null),t.rb(7,540672,null,0,r.g,[[8,null],[8,null]],{form:[0,"form"]},{ngSubmit:"ngSubmit"}),t.Hb(2048,null,r.c,null,[r.g]),t.rb(9,16384,null,0,r.m,[[4,r.c]],null,null),(l()(),t.sb(10,0,null,null,1,"h2",[["class","text-center"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["My Profile"])),(l()(),t.sb(12,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(13,0,null,null,1,"label",[["for","email"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Email address"])),(l()(),t.sb(15,0,null,null,5,"input",[["class","form-control"],["formControlName","email"],["id","email"],["placeholder","Enter email"],["type","email"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,16)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,16).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,16)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,16)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(16,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(18,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(20,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(21,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(22,0,null,null,1,"label",[["for","credit_card"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Credit Card"])),(l()(),t.sb(24,0,null,null,5,"input",[["class","form-control"],["formControlName","credit_card"],["id","credit_card"],["placeholder","Credit Card"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,25)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,25).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,25)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,25)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(25,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(27,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(29,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(30,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(31,0,null,null,1,"label",[["for","address_1"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Address 1"])),(l()(),t.sb(33,0,null,null,5,"input",[["class","form-control"],["formControlName","address_1"],["id","address_1"],["placeholder","Address 1"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,34)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,34).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,34)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,34)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(34,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(36,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(38,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(39,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(40,0,null,null,1,"label",[["for","address_2"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Address 2"])),(l()(),t.sb(42,0,null,null,5,"input",[["class","form-control"],["formControlName","address_2"],["id","address_2"],["placeholder","Address 2"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,43)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,43).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,43)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,43)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(43,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(45,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(47,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(48,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(49,0,null,null,1,"label",[["for","city"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["City"])),(l()(),t.sb(51,0,null,null,5,"input",[["class","form-control"],["formControlName","city"],["id","city"],["placeholder","City"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,52)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,52).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,52)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,52)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(52,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(54,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(56,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(57,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(58,0,null,null,1,"label",[["for","region"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Region"])),(l()(),t.sb(60,0,null,null,5,"input",[["class","form-control"],["formControlName","region"],["id","region"],["placeholder","Region"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,61)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,61).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,61)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,61)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(61,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(63,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(65,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(66,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(67,0,null,null,1,"label",[["for","postal_code"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Postal Code"])),(l()(),t.sb(69,0,null,null,5,"input",[["class","form-control"],["formControlName","postal_code"],["id","postal_code"],["placeholder","Postal Code"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,70)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,70).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,70)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,70)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(70,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(72,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(74,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(75,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(76,0,null,null,1,"label",[["for","country"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Country"])),(l()(),t.sb(78,0,null,null,5,"input",[["class","form-control"],["formControlName","country"],["id","country"],["placeholder","Country"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,79)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,79).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,79)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,79)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(79,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(81,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(83,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(84,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(85,0,null,null,1,"label",[["for","day_phone"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Day Phone"])),(l()(),t.sb(87,0,null,null,5,"input",[["class","form-control"],["formControlName","day_phone"],["id","day_phone"],["placeholder","Day Phone"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,88)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,88).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,88)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,88)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(88,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(90,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(92,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(93,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(94,0,null,null,1,"label",[["for","eve_phone"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Evening Phone"])),(l()(),t.sb(96,0,null,null,5,"input",[["class","form-control"],["formControlName","eve_phone"],["id","eve_phone"],["placeholder","Evening Phone"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,97)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,97).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,97)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,97)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(97,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(99,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(101,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(102,0,null,null,8,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(103,0,null,null,1,"label",[["for","mob_phone"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Mobile Phone"])),(l()(),t.sb(105,0,null,null,5,"input",[["class","form-control"],["formControlName","mob_phone"],["id","mob_phone"],["placeholder","Mobile Phone"],["type","text"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"input"],[null,"blur"],[null,"compositionstart"],[null,"compositionend"]],function(l,n,u){var r=!0;return"input"===n&&(r=!1!==t.Cb(l,106)._handleInput(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,106).onTouched()&&r),"compositionstart"===n&&(r=!1!==t.Cb(l,106)._compositionStart()&&r),"compositionend"===n&&(r=!1!==t.Cb(l,106)._compositionEnd(u.target.value)&&r),r},null,null)),t.rb(106,16384,null,0,r.d,[t.G,t.k,[2,r.a]],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.d]),t.rb(108,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(110,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.sb(111,0,null,null,10,"div",[["class","form-group"]],null,null,null,null,null)),(l()(),t.sb(112,0,null,null,1,"label",[["for","shipping_region"]],null,null,null,null,null)),(l()(),t.Kb(-1,null,["Shipping Region"])),(l()(),t.sb(114,0,null,null,7,"select",[["class","form-control"],["formControlName","shipping_region"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"change"],[null,"blur"]],function(l,n,u){var r=!0;return"change"===n&&(r=!1!==t.Cb(l,115).onChange(u.target.value)&&r),"blur"===n&&(r=!1!==t.Cb(l,115).onTouched()&&r),r},null,null)),t.rb(115,16384,null,0,r.s,[t.G,t.k],null,null),t.Hb(1024,null,r.j,function(l){return[l]},[r.s]),t.rb(117,671744,null,0,r.f,[[3,r.c],[8,null],[8,null],[6,r.j],[2,r.y]],{name:[0,"name"]},null),t.Hb(2048,null,r.k,null,[r.f]),t.rb(119,16384,null,0,r.l,[[4,r.k]],null,null),(l()(),t.jb(16777216,null,null,1,null,m)),t.rb(121,278528,null,0,a.l,[t.R,t.O,t.u],{ngForOf:[0,"ngForOf"]},null),(l()(),t.sb(122,0,null,null,2,"div",[["class","submit"]],null,null,null,null,null)),(l()(),t.sb(123,0,null,null,1,"button",[["class","btn btn-primary mt-3"],["type","submit"]],[[8,"disabled",0]],null,null,null,null)),(l()(),t.Kb(-1,null,["Save Profile"]))],function(l,n){var u=n.component;l(n,3,0),l(n,7,0,u.profileForm),l(n,18,0,"email"),l(n,27,0,"credit_card"),l(n,36,0,"address_1"),l(n,45,0,"address_2"),l(n,54,0,"city"),l(n,63,0,"region"),l(n,72,0,"postal_code"),l(n,81,0,"country"),l(n,90,0,"day_phone"),l(n,99,0,"eve_phone"),l(n,108,0,"mob_phone"),l(n,117,0,"shipping_region"),l(n,121,0,u.shipping_regions)},function(l,n){var u=n.component;l(n,5,0,t.Cb(n,9).ngClassUntouched,t.Cb(n,9).ngClassTouched,t.Cb(n,9).ngClassPristine,t.Cb(n,9).ngClassDirty,t.Cb(n,9).ngClassValid,t.Cb(n,9).ngClassInvalid,t.Cb(n,9).ngClassPending),l(n,15,0,t.Cb(n,20).ngClassUntouched,t.Cb(n,20).ngClassTouched,t.Cb(n,20).ngClassPristine,t.Cb(n,20).ngClassDirty,t.Cb(n,20).ngClassValid,t.Cb(n,20).ngClassInvalid,t.Cb(n,20).ngClassPending),l(n,24,0,t.Cb(n,29).ngClassUntouched,t.Cb(n,29).ngClassTouched,t.Cb(n,29).ngClassPristine,t.Cb(n,29).ngClassDirty,t.Cb(n,29).ngClassValid,t.Cb(n,29).ngClassInvalid,t.Cb(n,29).ngClassPending),l(n,33,0,t.Cb(n,38).ngClassUntouched,t.Cb(n,38).ngClassTouched,t.Cb(n,38).ngClassPristine,t.Cb(n,38).ngClassDirty,t.Cb(n,38).ngClassValid,t.Cb(n,38).ngClassInvalid,t.Cb(n,38).ngClassPending),l(n,42,0,t.Cb(n,47).ngClassUntouched,t.Cb(n,47).ngClassTouched,t.Cb(n,47).ngClassPristine,t.Cb(n,47).ngClassDirty,t.Cb(n,47).ngClassValid,t.Cb(n,47).ngClassInvalid,t.Cb(n,47).ngClassPending),l(n,51,0,t.Cb(n,56).ngClassUntouched,t.Cb(n,56).ngClassTouched,t.Cb(n,56).ngClassPristine,t.Cb(n,56).ngClassDirty,t.Cb(n,56).ngClassValid,t.Cb(n,56).ngClassInvalid,t.Cb(n,56).ngClassPending),l(n,60,0,t.Cb(n,65).ngClassUntouched,t.Cb(n,65).ngClassTouched,t.Cb(n,65).ngClassPristine,t.Cb(n,65).ngClassDirty,t.Cb(n,65).ngClassValid,t.Cb(n,65).ngClassInvalid,t.Cb(n,65).ngClassPending),l(n,69,0,t.Cb(n,74).ngClassUntouched,t.Cb(n,74).ngClassTouched,t.Cb(n,74).ngClassPristine,t.Cb(n,74).ngClassDirty,t.Cb(n,74).ngClassValid,t.Cb(n,74).ngClassInvalid,t.Cb(n,74).ngClassPending),l(n,78,0,t.Cb(n,83).ngClassUntouched,t.Cb(n,83).ngClassTouched,t.Cb(n,83).ngClassPristine,t.Cb(n,83).ngClassDirty,t.Cb(n,83).ngClassValid,t.Cb(n,83).ngClassInvalid,t.Cb(n,83).ngClassPending),l(n,87,0,t.Cb(n,92).ngClassUntouched,t.Cb(n,92).ngClassTouched,t.Cb(n,92).ngClassPristine,t.Cb(n,92).ngClassDirty,t.Cb(n,92).ngClassValid,t.Cb(n,92).ngClassInvalid,t.Cb(n,92).ngClassPending),l(n,96,0,t.Cb(n,101).ngClassUntouched,t.Cb(n,101).ngClassTouched,t.Cb(n,101).ngClassPristine,t.Cb(n,101).ngClassDirty,t.Cb(n,101).ngClassValid,t.Cb(n,101).ngClassInvalid,t.Cb(n,101).ngClassPending),l(n,105,0,t.Cb(n,110).ngClassUntouched,t.Cb(n,110).ngClassTouched,t.Cb(n,110).ngClassPristine,t.Cb(n,110).ngClassDirty,t.Cb(n,110).ngClassValid,t.Cb(n,110).ngClassInvalid,t.Cb(n,110).ngClassPending),l(n,114,0,t.Cb(n,119).ngClassUntouched,t.Cb(n,119).ngClassTouched,t.Cb(n,119).ngClassPristine,t.Cb(n,119).ngClassDirty,t.Cb(n,119).ngClassValid,t.Cb(n,119).ngClassInvalid,t.Cb(n,119).ngClassPending),l(n,123,0,u.profileForm.invalid)})}function f(l){return t.Mb(0,[(l()(),t.sb(0,0,null,null,1,"app-profile",[],null,null,null,C,p)),t.rb(1,245760,null,0,b.a,[s.a,r.e,c.a,d.o,d.a,g.j,i.n],null,null)],function(l,n){l(n,1,0)},null)}var h=t.ob("app-profile",b.a,f,{},{},[])},v5zc:function(l,n,u){"use strict";u.d(n,"a",function(){return e}),u("5IsW"),u("Xuwz");var t=u("cvo5"),r=u("4Da4"),e=function(){function l(l,n,u,t,r,e,o){this.appSettings=l,this.builder=n,this.customerService=u,this.router=t,this.route=r,this.toastr=e,this.store=o,this.profileForm=this.builder.group({email:[{value:"",disabled:!0}],credit_card:[""],address_1:[""],address_2:[""],city:[""],region:[""],postal_code:[""],country:[""],day_phone:[""],eve_phone:[""],mob_phone:[""],shipping_region:[null]}),this.STATIC_URL=this.appSettings.STATIC_URL}return l.prototype.ngOnInit=function(){var l=this;this.appSettings.isLoggedIn||this.router.navigate(["/customer/login"],{relativeTo:this.route}),this.store.select(r.a).subscribe(function(n){n&&(l.customer=n,l.profileForm.setValue({email:n.user.email,credit_card:n.credit_card,address_1:n.address_1,address_2:n.address_2,city:n.city,region:n.region,postal_code:n.postal_code,country:n.country,day_phone:n.day_phone,eve_phone:n.eve_phone,mob_phone:n.mob_phone,shipping_region:n.shipping_region?n.shipping_region:1}))}),this.customerService.getShippingRegions().subscribe(function(n){l.shipping_regions=n,l.profileForm.get("shipping_region").setValue(n[0].id)})},l.prototype.ngOnDestroy=function(){},l.prototype.onSubmit=function(){var l=this;this.customerService.saveProfile(this.profileForm.value).subscribe(function(n){l.store.dispatch(new t.b(n)),l.toastr.success("User profile saved successfully","Saved")})},l}()}}]);
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
+
+/***/ "./src/app/product/actions/index.ts":
+/*!******************************************!*\
+  !*** ./src/app/product/actions/index.ts ***!
+  \******************************************/
+/*! exports provided: ProductActionTypes, LoadDepartments, AddDepartments, LoadCartItems, AddCartItems, AddCartItem, UpdateCartItem, RemoveCartItem, EmptyCart */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductActionTypes", function() { return ProductActionTypes; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadDepartments", function() { return LoadDepartments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddDepartments", function() { return AddDepartments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadCartItems", function() { return LoadCartItems; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddCartItems", function() { return AddCartItems; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AddCartItem", function() { return AddCartItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UpdateCartItem", function() { return UpdateCartItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RemoveCartItem", function() { return RemoveCartItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmptyCart", function() { return EmptyCart; });
+var ProductActionTypes;
+(function (ProductActionTypes) {
+    ProductActionTypes["loadDepartments"] = "[Department] Load Departments";
+    ProductActionTypes["addDepartments"] = "[Department] Add Departments";
+    ProductActionTypes["loadCartItems"] = "[Cart] Load Cart Items";
+    ProductActionTypes["addCartItem"] = "[Cart] Add Item To Cart";
+    ProductActionTypes["updateCartItem"] = "[Cart] Update Item To Cart";
+    ProductActionTypes["addCartItems"] = "[Cart] Add Items To Cart";
+    ProductActionTypes["removeCartItem"] = "[Cart] Remove Cart Item";
+    ProductActionTypes["emptyCart"] = "[Cart] Empty Cart";
+})(ProductActionTypes || (ProductActionTypes = {}));
+var LoadDepartments = /** @class */ (function () {
+    function LoadDepartments(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.loadDepartments;
+    }
+    return LoadDepartments;
+}());
+
+var AddDepartments = /** @class */ (function () {
+    function AddDepartments(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.addDepartments;
+    }
+    return AddDepartments;
+}());
+
+var LoadCartItems = /** @class */ (function () {
+    function LoadCartItems(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.loadCartItems;
+    }
+    return LoadCartItems;
+}());
+
+var AddCartItems = /** @class */ (function () {
+    function AddCartItems(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.addCartItems;
+    }
+    return AddCartItems;
+}());
+
+var AddCartItem = /** @class */ (function () {
+    function AddCartItem(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.addCartItem;
+    }
+    return AddCartItem;
+}());
+
+var UpdateCartItem = /** @class */ (function () {
+    function UpdateCartItem(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.updateCartItem;
+    }
+    return UpdateCartItem;
+}());
+
+var RemoveCartItem = /** @class */ (function () {
+    function RemoveCartItem(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.removeCartItem;
+    }
+    return RemoveCartItem;
+}());
+
+var EmptyCart = /** @class */ (function () {
+    function EmptyCart(payload) {
+        this.payload = payload;
+        this.type = ProductActionTypes.emptyCart;
+    }
+    return EmptyCart;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/cart/cart.html":
+/*!***************************************************!*\
+  !*** ./src/app/product/components/cart/cart.html ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container cart\">\n  <div class=\"row\">\n    <app-header class=\"col-12\"></app-header>\n    <div *ngIf=\"user\" class=\"col-12\">\n      {{user.email}} <hr>\n    </div>\n    <h4 class=\"col-12 mb-2 mt-5\">Your Shopping Cart</h4>\n    <table class=\"table\">\n      <thead class=\"thead-dark\">\n        <tr>\n          <th scope=\"col\">Item</th>\n          <th scope=\"col\">Options</th>\n          <th scope=\"col\">Quantity</th>\n          <th scope=\"col\">Amount</th>\n          <th scope=\"col\">Action</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngIf=\"!getItems(true).length; else checkoutItems\">\n          <th>No item to display</th>\n        </tr>\n        <ng-template #checkoutItems>\n          <tr *ngFor=\"let item of getItems(true)\">\n            <th scope=\"row\">{{item.product.name}}</th>\n            <td>{{joinAttributes(item)}}</td>\n            <td>\n              <input type=\"number\" [(ngModel)]=\"item.quantity\" \n                style=\"width: 80px\" name=\"quantity\">\n            </td>\n            <td>${{getPrice(item)}}</td>\n            <td>\n              <div (click)=\"saveForLater(item)\" class=\"cursor-pointer\"><u>Save for later</u></div>\n              <div (click)=\"removeItem(item)\" class=\"mt-2 cursor-pointer\"><u>Remove</u></div>\n            </td>\n          </tr>\n          <tr>\n            <td></td>\n            <td></td>\n            <td>\n              <button class=\"btn btn-light btn-sm\" (click)=\"updateCart()\">Update</button>\n            </td>\n            <td></td>\n            <td></td>\n          </tr>\n          <tr>\n            <td colspan=\"3\" style=\"text-align: right\">\n              <div class=\"mt-2\">Subtotal:</div>\n            </td>\n            <td style=\"text-align: right\">\n              <div class=\"mt-2\"><b>${{totalPrice()}} USD</b></div>\n            </td>\n            <td></td>\n          </tr>\n          <tr>\n            <td colspan=\"5\" style=\"text-align: right\">\n              <a class=\"btn btn-primary mt-3 mr-5\" [routerLink]=\"['/checkout/']\">Proceed to checkout</a>\n            </td>\n          </tr>\n        </ng-template>\n      </tbody>\n    </table>\n    <hr>\n    <h4 class=\"mt-5 mb-2\">Saved products to buy later</h4>\n    <table class=\"table\">\n      <thead class=\"thead-dark\">\n        <tr>\n          <th scope=\"col\">Item</th>\n          <th scope=\"col\">Options</th>\n          <th scope=\"col\">Action</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngIf=\"!getItems(false).length\">\n          <th>No item to display</th>\n        </tr>\n        <tr *ngFor=\"let item of getItems(false)\">\n          <th scope=\"row\">{{item.product.name}}</th>\n          <td>{{joinAttributes(item)}}</td>\n          <td>\n            <div (click)=\"moveToCart(item)\" class=\"cursor-pointer\"><u>Move to cart</u></div>\n            <div (click)=\"removeItem(item)\" class=\"mt-2 cursor-pointer\"><u>Remove</u></div>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n    <div>\n      <button class=\"btn btn-secondary\" [routerLink]=\"'/'\">Continue Shopping</button>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/product/components/cart/cart.ts":
+/*!*************************************************!*\
+  !*** ./src/app/product/components/cart/cart.ts ***!
+  \*************************************************/
+/*! exports provided: CartComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CartComponent", function() { return CartComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../reducers */ "./src/app/product/reducers/index.ts");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../actions */ "./src/app/product/actions/index.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var src_app_shared_utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/shared/utils */ "./src/app/shared/utils.ts");
+
+
+
+
+
+
+
+
+
+var CartComponent = /** @class */ (function () {
+    function CartComponent(productService, appSettings, store, toastr) {
+        var _this = this;
+        this.productService = productService;
+        this.appSettings = appSettings;
+        this.store = store;
+        this.toastr = toastr;
+        this.STATIC_URL = this.appSettings.STATIC_URL;
+        this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_5__["selectAllCartItems"]).subscribe(function (items) {
+            _this.cartItems = items;
+        });
+        this.getPrice = src_app_shared_utils__WEBPACK_IMPORTED_MODULE_8__["getPrice"];
+        this.joinAttributes = src_app_shared_utils__WEBPACK_IMPORTED_MODULE_8__["joinAttributes"];
+    }
+    CartComponent.prototype.ngOnInit = function () {
+        this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_6__["LoadCartItems"]({}));
+    };
+    CartComponent.prototype.saveForLater = function (item) {
+        var _this = this;
+        this.productService.updateCartItem(item, {
+            buy_now: false
+        }).subscribe(function (it) {
+            _this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_6__["UpdateCartItem"]({
+                id: it.id,
+                changes: it
+            }));
+        });
+    };
+    CartComponent.prototype.removeItem = function (item) {
+        var _this = this;
+        this.productService.removeItem(item).subscribe(function () {
+            _this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_6__["RemoveCartItem"]({ id: item.id }));
+            _this.toastr.success('Item successfully removed from cart', 'Removed');
+        });
+    };
+    CartComponent.prototype.updateCart = function () {
+        var _this = this;
+        this.productService.updateCart(this.cartItems).subscribe(function (items) {
+            for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
+                var item = items_1[_i];
+                _this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_6__["UpdateCartItem"]({
+                    id: item.id,
+                    changes: item
+                }));
+            }
+            _this.toastr.success('Shopping cart updated successfully', 'Saved');
+        });
+    };
+    CartComponent.prototype.moveToCart = function (item) {
+        var _this = this;
+        this.productService.updateCartItem(item, {
+            buy_now: true
+        }).subscribe(function (it) {
+            _this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_6__["UpdateCartItem"]({
+                id: it.id,
+                changes: it
+            }));
+        });
+    };
+    CartComponent.prototype.proceedToCheckout = function () {
+    };
+    CartComponent.prototype.totalPrice = function () {
+        return Object(src_app_shared_utils__WEBPACK_IMPORTED_MODULE_8__["totalPrice"])(this.cartItems);
+    };
+    CartComponent.prototype.getItems = function (value) {
+        return this.cartItems.filter(function (item) { return item.buy_now == value; });
+    };
+    CartComponent.prototype.createOrder = function () {
+    };
+    CartComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-cart',
+            template: __webpack_require__(/*! ./cart.html */ "./src/app/product/components/cart/cart.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"],
+            src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__["AppSettings"],
+            _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"],
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_7__["ToastrService"]])
+    ], CartComponent);
+    return CartComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/checkout/checkout.html":
+/*!***********************************************************!*\
+  !*** ./src/app/product/components/checkout/checkout.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<ng-template #loadingbar>\n  <div>\n    <ul class=\"checkout-progress-bar\">\n      <li [ngClass]=\"{'is-active': order.status>=0, 'is-last': order.status==0}\">Delivery</li>\n      <li [ngClass]=\"{'is-active': order.status>=1, 'is-last': order.status==1}\">Confirmation</li>\n      <li [ngClass]=\"{'is-active': order.status>=2, 'is-last': order.status==2}\">Payment</li>\n      <li [ngClass]=\"{'is-active': order.status>=3, 'is-last': order.status==3}\">Finish</li>\n    </ul>\n  </div>\n</ng-template>\n\n<div class=\"container\">\n  <div class=\"row\" *ngIf=\"order\">\n    <app-header class=\"col-12\"></app-header>\n    <div class=\"col-12 mb-3\">\n      <h2 class=\"col-12 mb-3\">Checkout</h2>\n      <ng-container *ngTemplateOutlet=\"loadingbar\"></ng-container>\n    </div>\n    <ng-container *ngIf=\"order.status===0\">\n      <form class=\"col-12\" [formGroup]=\"deliveryForm\">\n        <div class=\"row\">\n          <div class=\"form-group col-6\">\n            <label for=\"first_name\">First Name*</label>\n            <input type=\"text\" class=\"form-control\" formControlName=\"first_name\" id=\"first_name\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"last_name\">Last Name*</label>\n            <input type=\"text\" formControlName=\"last_name\" class=\"form-control\" id=\"last_name\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"address_1\">Address 1*</label>\n            <input type=\"text\" formControlName=\"address_1\" class=\"form-control\" id=\"address_1\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"address_2\">Address 2*</label>\n            <input type=\"text\" formControlName=\"address_2\" class=\"form-control\" id=\"address_2\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"region\">Region*</label>\n            <input type=\"text\" formControlName=\"region\" class=\"form-control\" id=\"region\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"city\">City*</label>\n            <input type=\"text\" formControlName=\"city\" class=\"form-control\" id=\"city\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"zip_code\">Zip Code*</label>\n            <input type=\"text\" formControlName=\"postal_code\" class=\"form-control\" id=\"zip_code\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"country\">Country*</label>\n            <input type=\"text\" formControlName=\"country\" class=\"form-control\" id=\"country\">\n          </div>\n          <div class=\"form-group col-6\">\n            <label for=\"shipping_region\">Shipping Region*</label>\n            <select class=\"form-control\" formControlName=\"shipping_region\" id=\"country\">\n              <option [value]=\"shipping_region.id\" *ngFor=\"let shipping_region of shipping_regions\">\n                {{shipping_region.shipping_region}}</option>\n            </select>\n          </div>\n          <hr class=\"col-12\">\n          <h5 class=\"col-12\">Delivery options</h5>\n          <div class=\"custom-control custom-radio col-6 mt-2\" *ngFor=\"let shipping of _shippings\">\n            <input formControlName=\"shipping\" [value]=\"shipping.id\" type=\"radio\"\n              class=\"custom-control-input\" id=\"{{shipping.shipping_type}}\" name=\"shipping\">\n            <label class=\"custom-control-label\" for=\"{{shipping.shipping_type}}\">{{shipping.shipping_type}}</label>\n          </div>\n        </div>\n      </form>\n    </ng-container>\n    <ng-container *ngIf=\"order.status===1\">\n      <h4 class=\"col-9\">Order summary</h4>\n      <h4 class=\"col-3\">Delivery</h4>\n      <div class=\"col-9\">\n        <table class=\"table table-striped\">\n          <thead>\n            <tr>\n              <th>Item</th>\n              <th>Qty</th>\n              <th>Price</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngFor=\"let item of cartItems\">\n              <td>{{item.product.name}}</td>\n              <td>{{item.quantity}}</td>\n              <th>${{getPrice(item)}}</th>\n            </tr>\n          <tbody>\n        </table>\n      </div>\n      <div class=\"col-3\" *ngIf=\"customer\">\n        <h5 class=\"mb-3\">Address</h5>\n        {{deliveryForm.get('address_1').value + ' ' + deliveryForm.get('address_2').value}}\n        <h5 class=\"mt-3 mb-3\">Delivery options</h5>\n        {{getShipping().shipping_type}}\n      </div>\n      <hr class=\"col-12\">\n      <table class=\"table col-9\">\n        <thead class=\"thead-light\">\n          <tr>\n            <td>Subtotal</td>\n            <td>Shipping</td>\n            <td>Grandtotal</td>\n          </tr>\n        </thead>\n        <tbody>\n          <th>${{totalPrice()}}</th>\n          <th>${{getShipping().shipping_cost}}</th>\n          <th>${{grandTotal()}}</th>\n        </tbody>\n      </table>\n    </ng-container>\n    <ng-container *ngIf=\"order.status===3\">\n      <div class=\"col-12 text-center mb-3\">\n        <i class=\"fa fa-check-circle text-success mb-3\" style=\"font-size: 4rem;\"></i>\n        <h2>Success!</h2>\n        Your items will be shipped shortly,<br>\n        you will get email with details.\n      </div>\n    </ng-container>\n    <div class=\"col-12 mt-3 bg-light p-3 d-flex\" \n      [ngClass]=\"{'justify-content-between': order.status!==3, 'justify-content-center': order.status===3}\">\n      <button class=\"btn btn-danger\" *ngIf=\"order.status!==3\" (click)=\"back()\">Back</button>\n      <button class=\"btn btn-success\" *ngIf=\"order.status===0\" \n        [disabled]=\"!formValid()\" (click)=\"next()\">Next Step</button>\n      <button class=\"btn btn-success\" *ngIf=\"order.status===1\" \n        [disabled]=\"!formValid()\" (click)=\"pay()\">Pay</button>\n      <a class=\"btn btn-danger\" *ngIf=\"order.status===3\" \n        [routerLink]=\"['/']\">Back to shop</a>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/product/components/checkout/checkout.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/product/components/checkout/checkout.ts ***!
+  \*********************************************************/
+/*! exports provided: CheckoutComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckoutComponent", function() { return CheckoutComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+/* harmony import */ var _core_reducers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../core/reducers */ "./src/app/core/reducers/index.ts");
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../reducers */ "./src/app/product/reducers/index.ts");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../actions */ "./src/app/product/actions/index.ts");
+/* harmony import */ var _core_actions_user__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../core/actions/user */ "./src/app/core/actions/user.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_customer_services_customer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/customer/services/customer */ "./src/app/customer/services/customer.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var src_app_shared_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/shared/utils */ "./src/app/shared/utils.ts");
+/* harmony import */ var ng_stripe_checkout__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ng-stripe-checkout */ "./node_modules/ng-stripe-checkout/index.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var CheckoutComponent = /** @class */ (function () {
+    function CheckoutComponent(productService, customerService, appSettings, store, router, route, builder, stripeCheckoutLoader) {
+        var _this = this;
+        this.productService = productService;
+        this.customerService = customerService;
+        this.appSettings = appSettings;
+        this.store = store;
+        this.router = router;
+        this.route = route;
+        this.builder = builder;
+        this.stripeCheckoutLoader = stripeCheckoutLoader;
+        this.deliveryForm = this.builder.group({
+            first_name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            last_name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            city: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            postal_code: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            country: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            address_1: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            address_2: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            region: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            shipping_region: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            shipping: [null, [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required]]
+        });
+        this.order = {
+            status: 0,
+            shipping: 1
+        };
+        this.paymentForm = this.builder.group({
+            name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required],
+            credit_card: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].pattern('^[0-9]{16}$')]],
+            cvv: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].pattern('^[0-9]{3}$')]],
+            expiry_date: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_11__["Validators"].required, function (control) {
+                        var today = new Date(Date.now());
+                        var date = control.value;
+                        if ((today.getFullYear() < date.year) || (today.getFullYear() === date.year && today.getMonth() + 1 < date.month) ||
+                            (today.getFullYear() === date.year && today.getMonth() + 1 === date.month && today.getDate() <= date.day))
+                            return null;
+                        return { invalid: true };
+                    }]
+            ]
+        });
+        this.observers = this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_6__["selectAllCartItems"]).subscribe(function (items) {
+            _this.cartItems = items;
+            if (!_this.cartItems || !_this.cartItems.length && _this.order.status != 3) {
+                _this.router.navigate(['/cart/'], { relativeTo: _this.route });
+            }
+        });
+        this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_7__["LoadCartItems"]({}));
+        if (!this.appSettings.isLoggedIn) {
+            this.appSettings.navigateToCheckOut = true;
+            this.router.navigate(['/customer/login/'], { relativeTo: this.route });
+        }
+        this.getPrice = src_app_shared_utils__WEBPACK_IMPORTED_MODULE_13__["getPrice"];
+    }
+    CheckoutComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.observers.add(Object(rxjs__WEBPACK_IMPORTED_MODULE_12__["forkJoin"])(this.productService.loadShippings(), this.customerService.getShippingRegions()).subscribe(function (data) {
+            if (data) {
+                _this.shippings = data[0];
+                _this.shipping_regions = data[1];
+                _this.observers.add(_this.store.select(_core_reducers__WEBPACK_IMPORTED_MODULE_5__["selectorUser"]).subscribe(function (cust) {
+                    if (cust) {
+                        _this.customer = cust;
+                        var values = {
+                            first_name: _this.customer.user.first_name,
+                            last_name: _this.customer.user.last_name,
+                            city: _this.customer.city,
+                            postal_code: _this.customer.postal_code,
+                            country: _this.customer.country,
+                            address_1: _this.customer.address_1,
+                            address_2: _this.customer.address_2,
+                            region: _this.customer.region,
+                            shipping: _this.order.shipping ? _this.order.shipping : _this.shippings[0].id,
+                            shipping_region: _this.customer.shipping_region ? _this.customer.shipping_region : _this.shipping_regions[0].id
+                        };
+                        _this.deliveryForm.setValue(values);
+                        _this.paymentForm.get('credit_card').setValue(_this.customer.credit_card);
+                    }
+                }));
+            }
+        }));
+        this.deliveryForm.get('shipping').valueChanges.subscribe(function (value) {
+            _this.order.shipping = value;
+        });
+        this.deliveryForm.get('first_name').valueChanges.subscribe(function (value) {
+            _this.customer.user.first_name = value;
+        });
+        this.deliveryForm.get('last_name').valueChanges.subscribe(function (value) {
+            _this.customer.user.last_name = value;
+        });
+        this.deliveryForm.get('city').valueChanges.subscribe(function (value) {
+            _this.customer.city = value;
+        });
+        this.deliveryForm.get('postal_code').valueChanges.subscribe(function (value) {
+            _this.customer.postal_code = value;
+        });
+        this.deliveryForm.get('country').valueChanges.subscribe(function (value) {
+            _this.customer.country = value;
+        });
+        this.deliveryForm.get('region').valueChanges.subscribe(function (value) {
+            _this.customer.region = value;
+        });
+        this.deliveryForm.get('address_1').valueChanges.subscribe(function (value) {
+            _this.customer.address_1 = value;
+        });
+        this.deliveryForm.get('address_2').valueChanges.subscribe(function (value) {
+            _this.customer.address_2 = value;
+        });
+        this.deliveryForm.get('shipping_region').valueChanges.subscribe(function (value) {
+            _this.customer.shipping_region = value;
+            if (value) {
+                _this._shippings = _this.shippings.filter(function (s) { return s.shipping_region.id == value; });
+                _this.deliveryForm.get('shipping').setValue(_this._shippings[0].id);
+            }
+        });
+        this.paymentForm.get('credit_card').valueChanges.subscribe(function (value) {
+            _this.customer.credit_card = value;
+        });
+    };
+    CheckoutComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.stripeCheckoutLoader.createHandler({
+            key: this.appSettings.STRIPE_API_KEY
+        }).then(function (handler) {
+            _this.stripeCheckoutHandler = handler;
+        });
+    };
+    CheckoutComponent.prototype.ngOnDestroy = function () {
+        this.observers.unsubscribe();
+    };
+    CheckoutComponent.prototype.pay = function () {
+        var _this = this;
+        this.order.status = 2;
+        this.stripeCheckoutHandler.open({
+            amount: parseFloat(this.grandTotal()) * 100,
+            email: this.customer.user.email,
+            currency: 'USD',
+            name: this.customer.user.first_name + ' ' + this.customer.user.last_name
+        }).then(function (token) {
+            _this.observers.add(_this.productService.createOrder({ token: token.id, order: _this.order }).subscribe(function (data) {
+                _this.order = data;
+                _this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_7__["EmptyCart"]({}));
+            }, function (error) {
+                _this.order.status = 1;
+                throw (error);
+            }));
+        }, function (error) {
+            if (error != 'stripe_closed') {
+                console.log(error);
+            }
+            _this.order.status = 1;
+        });
+    };
+    CheckoutComponent.prototype.next = function () {
+        var _this = this;
+        this.observers.add(this.customerService.saveProfile(this.customer).subscribe(function (data) {
+            _this.store.dispatch(new _core_actions_user__WEBPACK_IMPORTED_MODULE_8__["UpdateUser"](data));
+            _this.order.status = 1;
+        }));
+    };
+    CheckoutComponent.prototype.back = function () {
+        if (this.order.status === 0)
+            this.router.navigate(['/cart/'], { relativeTo: this.route });
+        else
+            this.order.status -= 1;
+    };
+    CheckoutComponent.prototype.getItems = function (value) {
+        return this.cartItems.filter(function (item) { return item.buy_now == value; });
+    };
+    CheckoutComponent.prototype.totalPrice = function () {
+        return Object(src_app_shared_utils__WEBPACK_IMPORTED_MODULE_13__["totalPrice"])(this.cartItems);
+    };
+    CheckoutComponent.prototype.grandTotal = function () {
+        var grandTotal = parseFloat(this.totalPrice()) + parseFloat(this.getShipping().shipping_cost);
+        return grandTotal.toFixed(2);
+    };
+    CheckoutComponent.prototype.getShipping = function () {
+        var _this = this;
+        return this.shippings.find(function (shipping) { return _this.order.shipping == shipping.id; });
+    };
+    CheckoutComponent.prototype.formValid = function () {
+        if (this.order.status === 0)
+            return this.deliveryForm.valid;
+        else if (this.order.status === 1)
+            return true;
+        else if (this.order.status === 2)
+            return this.paymentForm.valid;
+    };
+    CheckoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-checkout',
+            template: __webpack_require__(/*! ./checkout.html */ "./src/app/product/components/checkout/checkout.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"],
+            src_app_customer_services_customer__WEBPACK_IMPORTED_MODULE_10__["CustomerService"],
+            src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__["AppSettings"],
+            _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_9__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_9__["ActivatedRoute"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_11__["FormBuilder"],
+            ng_stripe_checkout__WEBPACK_IMPORTED_MODULE_14__["StripeCheckoutLoader"]])
+    ], CheckoutComponent);
+    return CheckoutComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/orderdetail/order.html":
+/*!***********************************************************!*\
+  !*** ./src/app/product/components/orderdetail/order.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\" *ngIf=\"order\">\n    <app-header class=\"col-12\"></app-header>\n    <h4 class=\"col-12 mb-3 mt-3\">Order Details</h4>\n    <table class=\"col-12 table\">\n      <thead>\n        <tr>\n          <th>Product name</th>\n          <th>Options</th>\n          <th>Quantity</th>\n          <th>Amount</th>\n          <th></th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let order_detail of order.order_details\">\n          <td>{{order_detail.product.name}}</td>\n          <td>{{joinAttributes(order_detail)}}</td>\n          <td>{{order_detail.quantity}}</td>\n          <td>${{(order_detail.unit_cost*order_detail.quantity).toFixed(2)}}</td>\n          <td>\n            <a [routerLink]=\"['/',order_detail.product.name.split(' ').join('-'),'write-review',order_detail.id]\">\n              Rate and Review</a>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n    <hr class=\"col-12\">\n    <div class=\"col-4\">Status: <b>{{order.status | statusText}}</b></div>\n    <div class=\"col-4\">Shipped on: <b>{{shippedOn(order.shipped_on)}}</b></div>\n    <div class=\"col-4\">Total amount: <b>${{order.total_amount}}</b></div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/product/components/orderdetail/order.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/product/components/orderdetail/order.ts ***!
+  \*********************************************************/
+/*! exports provided: OrderDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrderDetailsComponent", function() { return OrderDetailsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_shared_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/utils */ "./src/app/shared/utils.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
+
+
+
+
+
+
+var OrderDetailsComponent = /** @class */ (function () {
+    function OrderDetailsComponent(productService, appSettings, router, route, date) {
+        var _this = this;
+        this.productService = productService;
+        this.appSettings = appSettings;
+        this.router = router;
+        this.route = route;
+        this.date = date;
+        if (!this.appSettings.isLoggedIn)
+            this.router.navigate(['/customer/login/'], { relativeTo: this.route });
+        this.orderId = this.route.snapshot.params.orderId;
+        this.productService.loadOrder(this.orderId).subscribe(function (order) {
+            _this.order = order;
+        });
+        this.joinAttributes = src_app_shared_utils__WEBPACK_IMPORTED_MODULE_5__["joinAttributes"];
+    }
+    OrderDetailsComponent.prototype.encodeURI = function (str) {
+        return encodeURI(str);
+    };
+    OrderDetailsComponent.prototype.shippedOn = function (shipped_on) {
+        if (!shipped_on)
+            return 'Not shipped yet';
+        return this.date.transform(shipped_on, 'medium');
+    };
+    OrderDetailsComponent.prototype.rateAndReview = function (product) {
+        return '';
+    };
+    OrderDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-order-details',
+            template: __webpack_require__(/*! ./order.html */ "./src/app/product/components/orderdetail/order.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"],
+            src_app_app_constant__WEBPACK_IMPORTED_MODULE_3__["AppSettings"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"]])
+    ], OrderDetailsComponent);
+    return OrderDetailsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/orders/orders.html":
+/*!*******************************************************!*\
+  !*** ./src/app/product/components/orders/orders.html ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <app-header class=\"col-12\"></app-header>\n    <div class=\"col-12\">\n      <h3 class=\"text-center mb-3\">My Orders</h3>\n      <table class=\"table\">\n        <thead class=\"thead-light\">\n          <tr>\n            <th>Order id</th>\n            <th>Total amount</th>\n            <th>Created on</th>\n            <th>Shipped on</th>\n            <th>Status</th>\n          </tr>\n        </thead>\n        <tbody>\n          <tr *ngFor=\"let order of orders\">\n            <td>\n              <a [routerLink]=\"[order.id]\">{{order.id}}</a>\n            </td>\n            <th>${{order.total_amount}}</th>\n            <td>{{order.created_on | date:'medium'}}</td>\n            <td>{{shippedOn(order.shipped_on)}}</td>\n            <td>{{order.status | statusText}}</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/product/components/orders/orders.ts":
+/*!*****************************************************!*\
+  !*** ./src/app/product/components/orders/orders.ts ***!
+  \*****************************************************/
+/*! exports provided: OrdersComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OrdersComponent", function() { return OrdersComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+
+
+
+
+
+
+var OrdersComponent = /** @class */ (function () {
+    function OrdersComponent(productService, appSettings, router, route, date) {
+        var _this = this;
+        this.productService = productService;
+        this.appSettings = appSettings;
+        this.router = router;
+        this.route = route;
+        this.date = date;
+        if (!this.appSettings.isLoggedIn)
+            this.router.navigate(['/customer/login/'], { relativeTo: this.route });
+        this.productService.loadOrders().subscribe(function (orders) {
+            _this.orders = orders;
+        });
+    }
+    OrdersComponent.prototype.shippedOn = function (shipped_on) {
+        if (!shipped_on)
+            return 'Not shipped yet';
+        return this.date.transform(shipped_on, 'medium');
+    };
+    OrdersComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-orders',
+            template: __webpack_require__(/*! ./orders.html */ "./src/app/product/components/orders/orders.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"],
+            src_app_app_constant__WEBPACK_IMPORTED_MODULE_3__["AppSettings"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
+            _angular_common__WEBPACK_IMPORTED_MODULE_5__["DatePipe"]])
+    ], OrdersComponent);
+    return OrdersComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/product/product.html":
+/*!*********************************************************!*\
+  !*** ./src/app/product/components/product/product.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"product-short\">\n  <div class=\"heading\">\n    <span class=\"brick\"></span>\n    <a [routerLink]=\"['/products',product.name.split(' ').join('-'),product.id]\" class=\"text\">{{product.name}}</a>\n  </div>\n  <div class=\"content mt-2\">\n    <div class=\"row\">\n      <div class=\"col-7\">\n        <div>\n          {{product.description | slice:0:150}}<ng-container *ngIf=\"product.description.length>150\">...</ng-container>\n        </div>\n      </div>\n      <div class=\"col-5\">\n        <img [src]=\"STATIC_URL+'images/product_images/'+product.thumbnail\">\n      </div>\n      <div class=\"col-5 price\">Price: \n        <ng-container *ngIf=\"toFloat(product.discounted_price)>0; else originalPrice\">\n          <del>${{product.price}}</del>&nbsp; <b>${{product.discounted_price}}</b>\n        </ng-container>\n        <ng-template #originalPrice><b>${{product.price}}</b></ng-template>\n      </div>\n      <div class=\"col-7 d-flex attributes\">\n        <ng-container *ngFor=\"let attribute_name of getKeys(product.attributes); let i = index\">\n          <div class=\"d-flex align-items-center\" [class.ml-2]=\"i!=0\">\n            {{attribute_name}}:\n            <select class=\"ml-1\" [(ngModel)]=\"attributes[attribute_name]\">\n              <option [ngValue]=\"attribute\" *ngFor=\"let attribute of product.attributes[attribute_name]\">\n                {{attribute.value}}</option>\n            </select>\n          </div>\n        </ng-container>\n      </div>\n      <div class=\"mt-2 add-to-cart\">\n        <button class=\"btn btn-primary\" [disabled]=\"!product.attributes['Color'] || !product.attributes['Size']\" \n          (click)=\"addToCart(true)\">Add to Cart</button>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/product/components/product/product.scss":
+/*!*********************************************************!*\
+  !*** ./src/app/product/components/product/product.scss ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".product-short {\n  height: 300px;\n  position: relative; }\n  .product-short .heading {\n    height: 20px; }\n  .product-short .attributes {\n    position: absolute;\n    bottom: 70px; }\n  .product-short .add-to-cart {\n    position: absolute;\n    bottom: 5px;\n    left: 0px; }\n  .product-short .price {\n    position: absolute;\n    bottom: 70px;\n    right: 0px; }\n"
+
+/***/ }),
+
+/***/ "./src/app/product/components/product/product.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/product/components/product/product.ts ***!
+  \*******************************************************/
+/*! exports provided: ProductComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductComponent", function() { return ProductComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../actions */ "./src/app/product/actions/index.ts");
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../reducers */ "./src/app/product/reducers/index.ts");
+
+
+
+
+
+
+
+var ProductComponent = /** @class */ (function () {
+    function ProductComponent(productService, appSettings, store) {
+        this.productService = productService;
+        this.appSettings = appSettings;
+        this.store = store;
+        this.attributes = {};
+        this.STATIC_URL = this.appSettings.STATIC_URL;
+    }
+    ProductComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        for (var attribute in this.product.attributes) {
+            this.attributes[attribute] = this.product.attributes[attribute][0];
+        }
+        this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_6__["isCartLoaded"]).subscribe(function (value) {
+            _this.isCartLoaded = value;
+        });
+    };
+    ProductComponent.prototype.ngOnDestroy = function () {
+    };
+    ProductComponent.prototype.getKeys = function (object) {
+        return Object.keys(object);
+    };
+    ProductComponent.prototype.toFloat = function (value) {
+        return parseFloat(value);
+    };
+    ProductComponent.prototype.addToCart = function (buy_now) {
+        var _this = this;
+        var item = {
+            attributes: JSON.stringify(this.attributes),
+            product: this.product,
+            buy_now: buy_now
+        };
+        this.productService.addToCart(item).subscribe(function (item) {
+            if (_this.isCartLoaded) {
+                if (item.quantity > 1) {
+                    _this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_5__["UpdateCartItem"]({
+                        id: item.id,
+                        changes: {
+                            quantity: item.quantity
+                        }
+                    }));
+                }
+                else {
+                    _this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_5__["AddCartItem"](item));
+                }
+            }
+        });
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)
+    ], ProductComponent.prototype, "product", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Boolean)
+    ], ProductComponent.prototype, "isCartLoaded", void 0);
+    ProductComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-product',
+            template: __webpack_require__(/*! ./product.html */ "./src/app/product/components/product/product.html"),
+            styles: [__webpack_require__(/*! ./product.scss */ "./src/app/product/components/product/product.scss")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"],
+            src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__["AppSettings"],
+            _ngrx_store__WEBPACK_IMPORTED_MODULE_3__["Store"]])
+    ], ProductComponent);
+    return ProductComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/productdetails/productdetails.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/product/components/productdetails/productdetails.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <app-header></app-header>\n  <div class=\"product\" *ngIf=\"product\">\n    <div class=\"heading\">\n      <div class=\"brick\"></div>\n      <span class=\"text\">{{product.name}}</span>\n    </div>\n    <div class=\"content mt-2\">\n      <div class=\"row\">\n        <div class=\"col-12\">\n          <img [src]=\"STATIC_URL+'images/product_images/'+product.image\">\n          <img [src]=\"STATIC_URL+'images/product_images/'+product.image_2\" class=\"ml-2\">\n        </div>\n        <div class=\"col-12 description\">\n          <div><i>{{product.description}}</i></div>\n        </div>\n        <div class=\"col-12\">\n          <div class=\"mt-2\">Price: <b>\n            <ng-container *ngIf=\"product.discounted_price>0; else originalPrice\">\n              <del>${{product.price}}</del> ${{product.discounted_price}}\n            </ng-container>\n            <ng-template #originalPrice>${{product.price}}</ng-template></b>\n          </div>\n        </div>\n        <div class=\"col-12\">\n          <ng-container *ngFor=\"let attribute_name of getKeys(product.attributes)\">\n            <div class=\"row\">\n              <div class=\"col-6\">\n              </div>\n            </div>\n          </ng-container>\n        </div>\n        <div class=\"col-12\">\n          <button class=\"mt-2\" (click)=\"addToCart()\">Add to cart</button>\n        </div>\n        <div class=\"col-12 mt-3\">\n          <button class=\"btn btn-sm btn-info\" *ngIf=\"!reviews\" (click)=\"loadReviews()\">Load reviews</button>\n          <app-reviews *ngIf=\"reviews\" [reviews]=\"reviews\"></app-reviews>\n        </div>\n        <div class=\"col-12 mt-3\">\n          <a [routerLink]=\"'/'\"><u>Continue Shopping</u></a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/product/components/productdetails/productdetails.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/product/components/productdetails/productdetails.ts ***!
+  \*********************************************************************/
+/*! exports provided: ProductDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductDetailsComponent", function() { return ProductDetailsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+
+
+
+
+
+var ProductDetailsComponent = /** @class */ (function () {
+    function ProductDetailsComponent(productService, router, route, appSettings) {
+        var _this = this;
+        this.productService = productService;
+        this.router = router;
+        this.route = route;
+        this.appSettings = appSettings;
+        this.attributes = {};
+        this.STATIC_URL = this.appSettings.STATIC_URL;
+        var productId = this.router.snapshot.params.productId;
+        this.productService.loadProduct(productId).subscribe(function (product) {
+            _this.product = product;
+        });
+    }
+    ProductDetailsComponent.prototype.getKeys = function (object) {
+        return Object.keys(object);
+    };
+    ProductDetailsComponent.prototype.addToCart = function () {
+        var _this = this;
+        var item = {
+            attributes: JSON.stringify(this.attributes),
+            product: this.product,
+            buy_now: true
+        };
+        this.productService.addToCart(item).subscribe(function (item) {
+            _this.route.navigate(['/cart/'], { relativeTo: _this.router });
+        });
+    };
+    ProductDetailsComponent.prototype.loadReviews = function () {
+        var _this = this;
+        this.productService.loadReviews(this.product.id).subscribe(function (reviews) {
+            _this.reviews = reviews;
+        });
+    };
+    ProductDetailsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-product-details',
+            template: __webpack_require__(/*! ./productdetails.html */ "./src/app/product/components/productdetails/productdetails.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_services_service__WEBPACK_IMPORTED_MODULE_2__["ProductService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            src_app_app_constant__WEBPACK_IMPORTED_MODULE_4__["AppSettings"]])
+    ], ProductDetailsComponent);
+    return ProductDetailsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/products/products.html":
+/*!***********************************************************!*\
+  !*** ./src/app/product/components/products/products.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container mb-3\">\n  <div class=\"row\">\n    <div class=\"col-md-5 col-lg-4 col-xl-3 left-side-container\">\n      <div class=\"box\">\n        <div class=\"heading\">\n          Search the Catalog\n          <i *ngIf=\"search.value || search.all_words\" style=\"cursor: pointer\"\n            class=\"fa fa-times-circle\" (click)=\"removeSearch()\"></i>\n        </div>\n        <div class=\"content\">\n          <div class=\"pt-4 text-center\">\n            <input style=\"width: 70%\" [(ngModel)]=\"search.value\" type=\"text\">\n            <button class=\"ml-2\" (click)=\"loadProducts(1)\">Go</button>\n          </div>\n          <div class=\"mb-3 text-center mt-2\">\n            <input id=\"all_words\" type=\"checkbox\" [(ngModel)]=\"search.all_words\"> \n            <label class=\"ml-1\" for=\"all_words\">Search for all words</label>\n          </div>\n        </div>\n      </div>\n      <div class=\"box\">\n        <div class=\"heading\">\n          Choose a Department\n          <i *ngIf=\"department\" [routerLink]=\"'/products'\"\n              class=\"fa fa-times-circle ml-1\" style=\"cursor: pointer\"></i>\n        </div>\n        <div class=\"content\">\n          <ul class=\"list-group-flush list-group\">\n            <ng-container *ngFor=\"let dept of departments\">\n              <li [ngClass]=\"{'active': dept.name==department?.name, 'list-group-item': true, 'cursor-pointer': true}\" (click)=\"goToDepartment(dept)\">\n                {{dept.name}}\n              </li>\n            </ng-container>\n          </ul>\n        </div>\n      </div>\n      <div class=\"box\" *ngIf=\"categories\">\n        <div class=\"heading\">\n          Choose a Category\n          <i *ngIf=\"category\" [routerLink]=\"['../../../products']\" \n              class=\"fa fa-times-circle ml-1\" style=\"cursor: pointer\"></i>\n        </div>\n        <div class=\"content\">\n          <ul class=\"list-group-flush list-group\">\n            <ng-container *ngFor=\"let cat of categories\">\n              <li [ngClass]=\"{'active': category && cat.name===category?.name, 'list-group-item': true, 'cursor-pointer': true}\" (click)=\"goToCategory(cat)\">\n                {{cat.name}}\n              </li>\n            </ng-container>\n          </ul>\n        </div>\n      </div>\n      <div class=\"box\" *ngIf=\"isCartLoaded; else viewCartButton\">\n        <div class=\"heading\">Cart Summary</div>\n        <div class=\"content\">\n          <ng-template #emptyCart>Your cart is empty!</ng-template>\n          <ng-container *ngIf=\"cartItems && cartItems.length>0; else emptyCart\">\n            <ng-container *ngFor=\"let cartItem of cartItems\">\n              <div class=\"row item\" >\n                <div class=\"col-2\"><b>{{cartItem.quantity}}</b></div>\n                <div class=\"col-2\">x</div>\n                <div class=\"col-8\">\n                  <b>{{cartItem.product.name}}</b>\n                  <span *ngIf=\"getKeys(cartItem.attributes).length>0\" class=\"attributes\">\n                    ({{joinAttributes(cartItem)}})</span>\n                </div>\n              </div>\n              <hr/>\n            </ng-container>\n            <div class=\"item text-center\">Subtotal({{totalItems()}} items): <strong>${{totalPrice()}}</strong></div>\n            <div class=\"text-center\">[ <a [routerLink]=\"['/cart/']\">View Details</a> ]</div>\n          </ng-container>\n        </div>\n      </div>\n      <ng-template #viewCartButton>\n        <div class=\"box border-none text-center\">\n          <button (click)=\"viewCart()\">View Cart</button>\n        </div>\n      </ng-template>\n    </div>\n    <div class=\"col-md-7 col-lg-8 col-xl-9\">\n      <app-header></app-header>\n      <div *ngIf=\"department\" class=\"breadcrumb-tshirtshop\">\n        <div class=\"brick\"></div>\n        <span>{{department.name}}</span>\n        <span class=\"ml-2\" *ngIf=\"category\"> >> {{category.name}}</span>\n      </div>\n      <ng-container *ngIf=\"searchUsed\">\n        <h4><b>Search results</b></h4>\n        <div class=\"mt-1\" *ngIf=\"!all_words\"><i>Products containing <strong>any</strong> of these words: \n          <strong>{{wordsAccepted.join(', ')}}</strong> </i></div>\n        <div class=\"mt-2\" *ngIf=\"!all_words && wordsIgnored.length\"><i>Ignored words: \n          <strong>{{wordsIgnored.join(', ')}}</strong> </i></div>\n      </ng-container>\n      <div class=\"container\">\n        <div class=\"row\">\n          <div class=\"mt-2 col-12\" *ngIf=\"pages && pages.length>1\">\n            <span class=\"mr-4 icon-o-button fa fa-angle-left\" (click)=\"loadProducts(currentPage-1)\" *ngIf=\"currentPage!=1\"></span>\n            <ng-container *ngFor=\"let page of pages\">\n              <span class=\"page\" (click)=\"loadProducts(page)\" \n                *ngIf=\"currentPage!=page\">{{page}}</span>\n              <span class=\"selected page\" *ngIf=\"currentPage==page\">{{page}}</span>\n            </ng-container>\n            <span (click)=\"loadProducts(currentPage+1)\" *ngIf=\"currentPage!=pages.length\" class=\"ml-4 icon-o-button fa fa-angle-right\"></span>\n          </div>\n          <div class=\"mt-4 col-12 col-lg-6 product-container\" *ngFor=\"let product of products\">\n            <app-product [product]=\"product\" [isCartLoaded]=\"isCartLoaded\"></app-product>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/product/components/products/products.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/product/components/products/products.ts ***!
+  \*********************************************************/
+/*! exports provided: ProductsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductsComponent", function() { return ProductsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../reducers */ "./src/app/product/reducers/index.ts");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions */ "./src/app/product/actions/index.ts");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
+
+
+
+
+
+
+var ProductsComponent = /** @class */ (function () {
+    function ProductsComponent(store, productService, router, route) {
+        var _this = this;
+        this.store = store;
+        this.productService = productService;
+        this.router = router;
+        this.route = route;
+        this.currentPage = 1;
+        this.wordsAccepted = [];
+        this.wordsIgnored = [];
+        this.searchUsed = false;
+        this.all_words = false;
+        this.isCartLoaded = false;
+        this.search = {
+            value: '',
+            all_words: false
+        };
+        this.onProductsLoaded = function (productsData) {
+            _this.products = productsData.products;
+            _this.pages = [];
+            for (var i = 1; i <= productsData.totalPages; i++) {
+                _this.pages.push(i);
+            }
+            _this.wordsAccepted = productsData.wordsAccepted.filter(function (w) { return w != ''; });
+            _this.wordsIgnored = productsData.wordsIgnored.filter(function (w) { return w != ''; });
+            _this.currentPage = productsData.currentPage;
+            _this.searchUsed = productsData.searchUsed;
+            _this.all_words = productsData.all_words;
+        };
+        this.STATIC_URL = window['STATIC_URL'];
+        this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_1__["selectAllDepartments"]).subscribe(function (depts) {
+            _this.departments = depts;
+        });
+        this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_2__["LoadDepartments"]({}));
+        this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_1__["isCartLoaded"]).subscribe(function (value) {
+            _this.isCartLoaded = value;
+        });
+        this.router.events.subscribe(function (event) {
+            if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_6__["NavigationEnd"]) {
+                _this.setDeartment();
+            }
+        });
+    }
+    ProductsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_1__["selectAllCartItems"]).subscribe(function (items) {
+            if (items && items.length) {
+                _this.cartItems = items;
+            }
+        });
+        this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_1__["selectAllDepartments"]).subscribe(function (depts) {
+            if (depts && depts.length) {
+                _this.departments = depts;
+                _this.setDeartment();
+            }
+        });
+        this.store.select(_reducers__WEBPACK_IMPORTED_MODULE_1__["isCartLoaded"]).subscribe(function (value) {
+            _this.isCartLoaded = value;
+        });
+    };
+    ProductsComponent.prototype.setDeartment = function () {
+        var deptName = this.route.snapshot.params.department;
+        if (deptName) {
+            this.department = this.departments.find(function (dept) { return dept.name === deptName; });
+            if (this.department) {
+                this.categories = this.department.categories;
+                var catName_1 = this.route.snapshot.params.category;
+                if (catName_1) {
+                    this.category = this.categories.find(function (cat) { return cat.name === catName_1; });
+                }
+            }
+        }
+        this.loadProducts();
+    };
+    ProductsComponent.prototype.loadProducts = function (page, department, category) {
+        var _this = this;
+        if (page === void 0) { page = null; }
+        if (department === void 0) { department = null; }
+        if (category === void 0) { category = null; }
+        if (page) {
+            this.currentPage = page;
+        }
+        if (!this.currentPage)
+            return;
+        var deptName = !this.department ? '' : this.department.name;
+        var catName = this.category ? this.category.name : '';
+        this.productService.loadProducts(this.currentPage, this.search, deptName, catName).subscribe(function (data) {
+            var searchUsed = false;
+            var all_words = false;
+            if (_this.search.value != '')
+                searchUsed = true;
+            if (_this.search.all_words)
+                all_words = true;
+            _this.onProductsLoaded({
+                products: data.results,
+                totalPages: data.total_pages,
+                wordsAccepted: data.wordsAccepted,
+                wordsIgnored: data.wordsIgnored,
+                currentPage: _this.currentPage,
+                searchUsed: searchUsed,
+                all_words: all_words
+            });
+        });
+    };
+    ProductsComponent.prototype.totalPrice = function () {
+        var price = 0;
+        for (var _i = 0, _a = this.cartItems; _i < _a.length; _i++) {
+            var item = _a[_i];
+            if (parseFloat(item.product.discounted_price) > 0)
+                price += parseFloat(item.product.discounted_price) * item.quantity;
+            else
+                price += parseFloat(item.product.price) * item.quantity;
+        }
+        return price.toFixed(2);
+    };
+    ProductsComponent.prototype.viewCart = function () {
+        this.store.dispatch(new _actions__WEBPACK_IMPORTED_MODULE_2__["LoadCartItems"]({}));
+    };
+    ProductsComponent.prototype.removeSearch = function () {
+        var reload = this.wordsAccepted.length > 0 || this.wordsAccepted.length > 0;
+        this.search = {
+            value: '',
+            all_words: false
+        };
+        if (reload) {
+            this.loadProducts();
+        }
+    };
+    ProductsComponent.prototype.joinAttributes = function (cartItem) {
+        var attributes = [];
+        var attribute_values = [];
+        for (var attribute in cartItem.attributes) {
+            attributes.push(attribute);
+            attribute_values.push(cartItem.attributes[attribute].value);
+        }
+        return attributes.join('/') + ': ' + attribute_values.join('/');
+    };
+    ProductsComponent.prototype.getKeys = function (object) {
+        return Object.keys(object);
+    };
+    ProductsComponent.prototype.goToDepartment = function (dept) {
+        this.router.navigate(['/department', dept.name, 'products'], { relativeTo: this.route });
+    };
+    ProductsComponent.prototype.goToCategory = function (cat) {
+        this.router.navigate(['/department', this.department.name, 'category', cat.name, 'products'], { relativeTo: this.route });
+    };
+    ProductsComponent.prototype.totalItems = function () {
+        var total = 0;
+        for (var _i = 0, _a = this.cartItems; _i < _a.length; _i++) {
+            var item = _a[_i];
+            total += item.quantity;
+        }
+        return total;
+    };
+    ProductsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+            selector: 'app-products',
+            template: __webpack_require__(/*! ./products.html */ "./src/app/product/components/products/products.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ngrx_store__WEBPACK_IMPORTED_MODULE_4__["Store"],
+            _services_service__WEBPACK_IMPORTED_MODULE_5__["ProductService"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]])
+    ], ProductsComponent);
+    return ProductsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/reviews/create.html":
+/*!********************************************************!*\
+  !*** ./src/app/product/components/reviews/create.html ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"container\">\n  <div class=\"row\" *ngIf=\"review\">\n    <app-header class=\"col-12\"></app-header>\n    <h3 class=\"col-12 text-center\">{{review.id?'Edit':'Write'}} Review for <u>{{productName}}</u></h3>\n    <form (ngSubmit)=\"onSumbit\" class=\"col-12 mt-5\">\n      <div class=\"form-group\">\n        <label>Rating:</label>\n        <ngb-rating class=\"ml-3\" required [(rate)]=\"review.rating\" [max]=\"5\">\n          <ng-template let-fill=\"fill\">\n            <span class=\"star\" [class.filled]=\"fill === 100\">&#9733;</span>\n          </ng-template>\n        </ngb-rating>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"review\">Write review:</label>\n        <textarea rows=\"4\" class=\"form-control\" name=\"review\" [(ngModel)]=\"review.review\" id=\"review\"></textarea>\n      </div>\n      <div class=\"text-center\">\n        <button type=\"submit\" (click)=\"onSumbit()\" class=\"mt-3 btn btn-success\" [disabled]=\"review.rating===0\">Submit</button>\n      </div>\n    </form>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/product/components/reviews/create.ts":
+/*!******************************************************!*\
+  !*** ./src/app/product/components/reviews/create.ts ***!
+  \******************************************************/
+/*! exports provided: ReviewCreateComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewCreateComponent", function() { return ReviewCreateComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../services/service */ "./src/app/product/services/service.ts");
+
+
+
+
+
+var ReviewCreateComponent = /** @class */ (function () {
+    function ReviewCreateComponent(appSettings, router, route, productService) {
+        var _this = this;
+        this.appSettings = appSettings;
+        this.router = router;
+        this.route = route;
+        this.productService = productService;
+        if (!this.appSettings.isLoggedIn) {
+            this.router.navigate(['/customer/login/'], { relativeTo: this.route });
+        }
+        this.orderDetailId = this.route.snapshot.params.orderDetailId;
+        this.productName = this.route.snapshot.params.productName.split('-').join(' ');
+        this.productService.loadReview(this.orderDetailId).subscribe(function (review) {
+            _this.review = review;
+        });
+    }
+    ReviewCreateComponent.prototype.onSumbit = function () {
+        var _this = this;
+        this.productService.saveReview(this.orderDetailId, this.review).subscribe(function (review) {
+            _this.review = review;
+        });
+    };
+    ReviewCreateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-review-create',
+            template: __webpack_require__(/*! ./create.html */ "./src/app/product/components/reviews/create.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_app_constant__WEBPACK_IMPORTED_MODULE_2__["AppSettings"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+            _services_service__WEBPACK_IMPORTED_MODULE_4__["ProductService"]])
+    ], ReviewCreateComponent);
+    return ReviewCreateComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/components/reviews/reviews.html":
+/*!*********************************************************!*\
+  !*** ./src/app/product/components/reviews/reviews.html ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"reviews-box\" *ngIf=\"reviews\">\n  <h4 class=\"mb-3\">Reviews</h4>\n  <div *ngIf=\"!reviews.length\">\n    No reviews to show\n  </div>\n  <ng-container *ngIf=\"reviews.length\">\n    <div class=\"mb-2\" *ngFor=\"let review of reviews\">\n      <u>@{{review.customer.email}}</u>\n      <ngb-rating class=\"ml-3\" [rate]=\"review.rating\" [max]=\"5\" [readonly]=\"true\">\n        <ng-template let-fill=\"fill\">\n          <span class=\"star\" [class.filled]=\"fill===100\">&#9733;</span>\n        </ng-template>\n      </ngb-rating>\n      <textarea class=\"form-control\" disabled>{{review.review}}</textarea>\n    </div>\n  </ng-container>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/product/components/reviews/reviews.ts":
+/*!*******************************************************!*\
+  !*** ./src/app/product/components/reviews/reviews.ts ***!
+  \*******************************************************/
+/*! exports provided: ReviewsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewsComponent", function() { return ReviewsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var ReviewsComponent = /** @class */ (function () {
+    function ReviewsComponent() {
+    }
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Array)
+    ], ReviewsComponent.prototype, "reviews", void 0);
+    ReviewsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-reviews',
+            template: __webpack_require__(/*! ./reviews.html */ "./src/app/product/components/reviews/reviews.html")
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], ReviewsComponent);
+    return ReviewsComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/effects/index.ts":
+/*!******************************************!*\
+  !*** ./src/app/product/effects/index.ts ***!
+  \******************************************/
+/*! exports provided: ProductionEffects */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductionEffects", function() { return ProductionEffects; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm5/index.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../actions */ "./src/app/product/actions/index.ts");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../services/service */ "./src/app/product/services/service.ts");
+
+
+
+
+
+
+
+var ProductionEffects = /** @class */ (function () {
+    function ProductionEffects(actions$, productService) {
+        var _this = this;
+        this.actions$ = actions$;
+        this.productService = productService;
+        this.loadDepartments$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["ofType"])(_actions__WEBPACK_IMPORTED_MODULE_5__["ProductActionTypes"].loadDepartments), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (action) { return action.payload; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(function (data) {
+            return _this.productService.loadDepartments().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+                return ({ type: _actions__WEBPACK_IMPORTED_MODULE_5__["ProductActionTypes"].addDepartments, payload: res });
+            }));
+        }));
+        this.loadCartItems$ = this.actions$.pipe(Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["ofType"])(_actions__WEBPACK_IMPORTED_MODULE_5__["ProductActionTypes"].loadCartItems), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (action) { return action.payload; }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["switchMap"])(function (data) {
+            return _this.productService.loadCart().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_4__["map"])(function (res) {
+                return ({ type: _actions__WEBPACK_IMPORTED_MODULE_5__["ProductActionTypes"].addCartItems, payload: res });
+            }));
+        }));
+    }
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Effect"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"])
+    ], ProductionEffects.prototype, "loadDepartments$", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Effect"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"])
+    ], ProductionEffects.prototype, "loadCartItems$", void 0);
+    ProductionEffects = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ngrx_effects__WEBPACK_IMPORTED_MODULE_2__["Actions"],
+            _services_service__WEBPACK_IMPORTED_MODULE_6__["ProductService"]])
+    ], ProductionEffects);
+    return ProductionEffects;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/product.module.ts":
+/*!*******************************************!*\
+  !*** ./src/app/product/product.module.ts ***!
+  \*******************************************/
+/*! exports provided: ProductModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductModule", function() { return ProductModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm5/common.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/fesm5/ng-bootstrap.js");
+/* harmony import */ var _product_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./product.router */ "./src/app/product/product.router.ts");
+/* harmony import */ var _services_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services/service */ "./src/app/product/services/service.ts");
+/* harmony import */ var _ngrx_effects__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngrx/effects */ "./node_modules/@ngrx/effects/fesm5/effects.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _reducers__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./reducers */ "./src/app/product/reducers/index.ts");
+/* harmony import */ var _effects__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./effects */ "./src/app/product/effects/index.ts");
+/* harmony import */ var _components_product_product__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/product/product */ "./src/app/product/components/product/product.ts");
+/* harmony import */ var _components_products_products__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/products/products */ "./src/app/product/components/products/products.ts");
+/* harmony import */ var _components_cart_cart__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/cart/cart */ "./src/app/product/components/cart/cart.ts");
+/* harmony import */ var _core_core_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../core/core.module */ "./src/app/core/core.module.ts");
+/* harmony import */ var _components_productdetails_productdetails__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/productdetails/productdetails */ "./src/app/product/components/productdetails/productdetails.ts");
+/* harmony import */ var _components_checkout_checkout__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/checkout/checkout */ "./src/app/product/components/checkout/checkout.ts");
+/* harmony import */ var _customer_customer_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../customer/customer.module */ "./src/app/customer/customer.module.ts");
+/* harmony import */ var _components_orderdetail_order__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/orderdetail/order */ "./src/app/product/components/orderdetail/order.ts");
+/* harmony import */ var _components_orders_orders__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/orders/orders */ "./src/app/product/components/orders/orders.ts");
+/* harmony import */ var _shared_shared_module__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../shared/shared.module */ "./src/app/shared/shared.module.ts");
+/* harmony import */ var _components_reviews_create__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/reviews/create */ "./src/app/product/components/reviews/create.ts");
+/* harmony import */ var _components_reviews_reviews__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/reviews/reviews */ "./src/app/product/components/reviews/reviews.ts");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var ProductModule = /** @class */ (function () {
+    function ProductModule() {
+    }
+    ProductModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            declarations: [
+                _components_products_products__WEBPACK_IMPORTED_MODULE_12__["ProductsComponent"],
+                _components_product_product__WEBPACK_IMPORTED_MODULE_11__["ProductComponent"],
+                _components_cart_cart__WEBPACK_IMPORTED_MODULE_13__["CartComponent"],
+                _components_productdetails_productdetails__WEBPACK_IMPORTED_MODULE_15__["ProductDetailsComponent"],
+                _components_checkout_checkout__WEBPACK_IMPORTED_MODULE_16__["CheckoutComponent"],
+                _components_orderdetail_order__WEBPACK_IMPORTED_MODULE_18__["OrderDetailsComponent"],
+                _components_orders_orders__WEBPACK_IMPORTED_MODULE_19__["OrdersComponent"],
+                _components_reviews_create__WEBPACK_IMPORTED_MODULE_21__["ReviewCreateComponent"],
+                _components_reviews_reviews__WEBPACK_IMPORTED_MODULE_22__["ReviewsComponent"]
+            ],
+            exports: [
+                _components_products_products__WEBPACK_IMPORTED_MODULE_12__["ProductsComponent"]
+            ],
+            imports: [
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+                _core_core_module__WEBPACK_IMPORTED_MODULE_14__["CoreModule"],
+                _shared_shared_module__WEBPACK_IMPORTED_MODULE_20__["SharedModule"],
+                _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_4__["NgbModule"],
+                _customer_customer_module__WEBPACK_IMPORTED_MODULE_17__["CustomerModule"],
+                _product_router__WEBPACK_IMPORTED_MODULE_5__["ProductRoutingModule"],
+                _ngrx_store__WEBPACK_IMPORTED_MODULE_8__["StoreModule"].forFeature('productStore', _reducers__WEBPACK_IMPORTED_MODULE_9__["reducer"]),
+                _ngrx_effects__WEBPACK_IMPORTED_MODULE_7__["EffectsModule"].forFeature([_effects__WEBPACK_IMPORTED_MODULE_10__["ProductionEffects"]])
+            ],
+            providers: [
+                _services_service__WEBPACK_IMPORTED_MODULE_6__["ProductService"],
+                _angular_common__WEBPACK_IMPORTED_MODULE_2__["DatePipe"]
+            ],
+            entryComponents: []
+        })
+    ], ProductModule);
+    return ProductModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/product.router.ts":
+/*!*******************************************!*\
+  !*** ./src/app/product/product.router.ts ***!
+  \*******************************************/
+/*! exports provided: ProductRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductRoutingModule", function() { return ProductRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _components_products_products__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/products/products */ "./src/app/product/components/products/products.ts");
+/* harmony import */ var _components_cart_cart__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/cart/cart */ "./src/app/product/components/cart/cart.ts");
+/* harmony import */ var _components_productdetails_productdetails__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/productdetails/productdetails */ "./src/app/product/components/productdetails/productdetails.ts");
+/* harmony import */ var _components_checkout_checkout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/checkout/checkout */ "./src/app/product/components/checkout/checkout.ts");
+/* harmony import */ var _components_orders_orders__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/orders/orders */ "./src/app/product/components/orders/orders.ts");
+/* harmony import */ var _components_orderdetail_order__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/orderdetail/order */ "./src/app/product/components/orderdetail/order.ts");
+/* harmony import */ var _components_reviews_create__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/reviews/create */ "./src/app/product/components/reviews/create.ts");
+
+
+
+
+
+
+
+
+
+
+var routes = [
+    {
+        path: 'cart',
+        component: _components_cart_cart__WEBPACK_IMPORTED_MODULE_4__["CartComponent"]
+    },
+    {
+        path: '',
+        redirectTo: 'products',
+        pathMatch: 'full'
+    },
+    {
+        path: 'products',
+        component: _components_products_products__WEBPACK_IMPORTED_MODULE_3__["ProductsComponent"]
+    },
+    {
+        path: 'products/:productName/:productId',
+        component: _components_productdetails_productdetails__WEBPACK_IMPORTED_MODULE_5__["ProductDetailsComponent"]
+    },
+    {
+        path: 'department/:department/products',
+        component: _components_products_products__WEBPACK_IMPORTED_MODULE_3__["ProductsComponent"]
+    },
+    {
+        path: 'department/:department/category/:category/products',
+        component: _components_products_products__WEBPACK_IMPORTED_MODULE_3__["ProductsComponent"]
+    },
+    {
+        path: 'checkout',
+        component: _components_checkout_checkout__WEBPACK_IMPORTED_MODULE_6__["CheckoutComponent"]
+    },
+    {
+        path: 'orders',
+        component: _components_orders_orders__WEBPACK_IMPORTED_MODULE_7__["OrdersComponent"]
+    },
+    {
+        path: 'orders/:orderId',
+        component: _components_orderdetail_order__WEBPACK_IMPORTED_MODULE_8__["OrderDetailsComponent"]
+    },
+    {
+        path: ':productName/write-review/:orderDetailId',
+        component: _components_reviews_create__WEBPACK_IMPORTED_MODULE_9__["ReviewCreateComponent"]
+    }
+];
+var ProductRoutingModule = /** @class */ (function () {
+    function ProductRoutingModule() {
+    }
+    ProductRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        })
+    ], ProductRoutingModule);
+    return ProductRoutingModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/reducers/cart.ts":
+/*!******************************************!*\
+  !*** ./src/app/product/reducers/cart.ts ***!
+  \******************************************/
+/*! exports provided: getProductState, getCartEntities, selectAllCartItems, isCartLoaded, reducer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProductState", function() { return getProductState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCartEntities", function() { return getCartEntities; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectAllCartItems", function() { return selectAllCartItems; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isCartLoaded", function() { return isCartLoaded; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _ngrx_entity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/entity */ "./node_modules/@ngrx/entity/fesm5/entity.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../actions */ "./src/app/product/actions/index.ts");
+
+
+
+
+var CartAdapter = Object(_ngrx_entity__WEBPACK_IMPORTED_MODULE_2__["createEntityAdapter"])();
+var initialState = CartAdapter.getInitialState({
+    isCartLoaded: false
+});
+var _a = CartAdapter.getSelectors(), SelectCartIds = _a.selectIds, SelectCartEntities = _a.selectEntities, SelectAllCartItems = _a.selectAll, CartItemsCount = _a.selectTotal;
+var getProductState = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createFeatureSelector"])('productStore');
+var getCartEntities = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(getProductState, function (state) { return state.cart; });
+var selectAllCartItems = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(getCartEntities, SelectAllCartItems);
+var isCartLoaded = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(getCartEntities, function (state) { return state.isCartLoaded; });
+function reducer(state, action) {
+    if (state === void 0) { state = initialState; }
+    switch (action.type) {
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].loadCartItems: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { isCartLoaded: true });
+        }
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].addCartItems: {
+            return CartAdapter.addAll(action.payload, state);
+        }
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].addCartItem: {
+            return CartAdapter.addOne(action.payload, state);
+        }
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].removeCartItem: {
+            return CartAdapter.removeOne(action.payload.id, state);
+        }
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].updateCartItem: {
+            return CartAdapter.updateOne(action.payload, state);
+        }
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].emptyCart: {
+            return CartAdapter.removeAll(state);
+        }
+        default: {
+            return state;
+        }
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/product/reducers/department.ts":
+/*!************************************************!*\
+  !*** ./src/app/product/reducers/department.ts ***!
+  \************************************************/
+/*! exports provided: getProductState, getDepartmentEntities, selectAllDepartments, reducer */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProductState", function() { return getProductState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getDepartmentEntities", function() { return getDepartmentEntities; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectAllDepartments", function() { return selectAllDepartments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _ngrx_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ngrx/store */ "./node_modules/@ngrx/store/fesm5/store.js");
+/* harmony import */ var _ngrx_entity__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ngrx/entity */ "./node_modules/@ngrx/entity/fesm5/entity.js");
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../actions */ "./src/app/product/actions/index.ts");
+
+
+
+
+var DepartmentsAdapter = Object(_ngrx_entity__WEBPACK_IMPORTED_MODULE_2__["createEntityAdapter"])();
+var initialState = DepartmentsAdapter.getInitialState({
+    loading: true
+});
+var _a = DepartmentsAdapter.getSelectors(), SelectDepartmentIds = _a.selectIds, SelectDepartmentEntities = _a.selectEntities, SelectAllDepartments = _a.selectAll, DepartmentsCount = _a.selectTotal;
+var getProductState = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createFeatureSelector"])('productStore');
+var getDepartmentEntities = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(getProductState, function (state) { return state.departments; });
+var selectAllDepartments = Object(_ngrx_store__WEBPACK_IMPORTED_MODULE_1__["createSelector"])(getDepartmentEntities, SelectAllDepartments);
+function reducer(state, action) {
+    if (state === void 0) { state = initialState; }
+    switch (action.type) {
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].addDepartments: {
+            state = tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { loading: false });
+            return DepartmentsAdapter.addAll(action.payload, state);
+        }
+        case _actions__WEBPACK_IMPORTED_MODULE_3__["ProductActionTypes"].loadDepartments: {
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"]({}, state, { loading: true });
+        }
+        default: {
+            return state;
+        }
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/app/product/reducers/index.ts":
+/*!*******************************************!*\
+  !*** ./src/app/product/reducers/index.ts ***!
+  \*******************************************/
+/*! exports provided: reducer, selectAllDepartments, getDepartmentEntities, selectAllCartItems, getCartEntities, isCartLoaded */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducer", function() { return reducer; });
+/* harmony import */ var _department__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./department */ "./src/app/product/reducers/department.ts");
+/* harmony import */ var _cart__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./cart */ "./src/app/product/reducers/cart.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "selectAllDepartments", function() { return _department__WEBPACK_IMPORTED_MODULE_0__["selectAllDepartments"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getDepartmentEntities", function() { return _department__WEBPACK_IMPORTED_MODULE_0__["getDepartmentEntities"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "selectAllCartItems", function() { return _cart__WEBPACK_IMPORTED_MODULE_1__["selectAllCartItems"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getCartEntities", function() { return _cart__WEBPACK_IMPORTED_MODULE_1__["getCartEntities"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isCartLoaded", function() { return _cart__WEBPACK_IMPORTED_MODULE_1__["isCartLoaded"]; });
+
+
+
+var reducer = {
+    departments: _department__WEBPACK_IMPORTED_MODULE_0__["reducer"],
+    cart: _cart__WEBPACK_IMPORTED_MODULE_1__["reducer"]
+};
+
+
+
+
+/***/ }),
+
+/***/ "./src/app/product/services/service.ts":
+/*!*********************************************!*\
+  !*** ./src/app/product/services/service.ts ***!
+  \*********************************************/
+/*! exports provided: ProductService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductService", function() { return ProductService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var src_app_app_constant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/app.constant */ "./src/app/app.constant.ts");
+
+
+
+
+var ProductService = /** @class */ (function () {
+    function ProductService(http, appSettings) {
+        this.http = http;
+        this.appSettings = appSettings;
+    }
+    ProductService.prototype.apiUrl = function (department, category, product_id) {
+        var url = this.appSettings.API_PREFIX;
+        if (department != '')
+            url += 'department/' + department + '/';
+        if (category != '')
+            url += 'category/' + category + '/';
+        url += 'products/';
+        if (product_id)
+            url += product_id;
+        return url;
+    };
+    ProductService.prototype.loadProducts = function (page, search, department, category) {
+        if (department === void 0) { department = ''; }
+        if (category === void 0) { category = ''; }
+        var url = this.apiUrl(department, category, null);
+        url += "?search=" + JSON.stringify(search);
+        if (page && page != 1)
+            url += "&page=" + page;
+        return this.http.get(url);
+    };
+    ProductService.prototype.loadProduct = function (product_id) {
+        var url = this.appSettings.API_PREFIX + "products/" + product_id;
+        return this.http.get(url);
+    };
+    ProductService.prototype.loadDepartments = function () {
+        var url = this.appSettings.API_PREFIX + "departments/";
+        return this.http.get(url);
+    };
+    ProductService.prototype.loadCategories = function (department) {
+        var url = this.appSettings.API_PREFIX + "department/" + department + "/categories";
+        return this.http.get(url);
+    };
+    ProductService.prototype.loadCart = function () {
+        var url = this.appSettings.API_PREFIX + "cart";
+        return this.http.get(url);
+    };
+    ProductService.prototype.addToCart = function (item) {
+        var url = this.appSettings.API_PREFIX + "cart";
+        return this.http.post(url, item);
+    };
+    ProductService.prototype.updateCartItem = function (item, data) {
+        var url = this.appSettings.API_PREFIX + "cart/" + item.id;
+        return this.http.put(url, data);
+    };
+    ProductService.prototype.updateCart = function (items) {
+        var url = this.appSettings.API_PREFIX + "cart";
+        return this.http.put(url, {
+            items: items
+        });
+    };
+    ProductService.prototype.removeItem = function (item) {
+        var url = this.appSettings.API_PREFIX + "cart/" + item.id;
+        return this.http.delete(url);
+    };
+    ProductService.prototype.loadShippings = function () {
+        var url = this.appSettings.API_PREFIX + "shippings";
+        return this.http.get(url);
+    };
+    ProductService.prototype.loadOrder = function (orderId) {
+        var url = this.appSettings.API_PREFIX + "orders/" + orderId;
+        return this.http.get(url);
+    };
+    ProductService.prototype.loadOrders = function () {
+        var url = this.appSettings.API_PREFIX + "orders";
+        return this.http.get(url);
+    };
+    ProductService.prototype.updateOrder = function (order) {
+        var url = this.appSettings.API_PREFIX + "order";
+        return this.http.put(url, order);
+    };
+    ProductService.prototype.createOrder = function (data) {
+        var url = this.appSettings.API_PREFIX + "orders";
+        return this.http.post(url, data);
+    };
+    ProductService.prototype.loadReview = function (orderDetailId) {
+        var url = "" + this.appSettings.API_PREFIX + orderDetailId + "/review/";
+        return this.http.get(url);
+    };
+    ProductService.prototype.saveReview = function (orderDetailId, review) {
+        var url = "" + this.appSettings.API_PREFIX + orderDetailId + "/review/";
+        return this.http.post(url, review);
+    };
+    ProductService.prototype.loadReviews = function (productId) {
+        var url = "" + this.appSettings.API_PREFIX + productId + "/reviews/";
+        return this.http.get(url);
+    };
+    ProductService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"],
+            src_app_app_constant__WEBPACK_IMPORTED_MODULE_3__["AppSettings"]])
+    ], ProductService);
+    return ProductService;
+}());
+
+
+
+/***/ })
+
+}]);

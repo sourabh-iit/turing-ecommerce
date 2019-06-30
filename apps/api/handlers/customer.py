@@ -3,7 +3,7 @@ from rest_framework.response import Response
 
 from django.db import transaction
 from django.contrib.auth.models import User
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, PermissionDenied
 
 from apps.user.models import Customer
 from apps.api.serializers.customer import CustomerSerializer
@@ -19,37 +19,35 @@ class CustomerListHandler(APIView):
   
   def post(self, request):
     data = request.data
-    try:
-      if data['password']!=data['confirm_password']:
-        raise ValidationError('Password and Confirm Password did not match')
-      if User.objects.filter(email=data['email']).exists():
-        raise ValidationError('User with email address '+data['email']+' already exists')
-      with transaction.atomic():
-        user = User.objects.create_user(
-          username=data['email'],
-          email=data['email'],
-          password=data['password']
-        )
-        customer = Customer.objects.create(user=user)
-      return Response(CustomerSerializer(customer).data)
-    except KeyError:
-      ValidationError('Insufficient data provided')
+    if data['password']!=data['confirm_password']:
+      raise ValidationError('Password and Confirm Password did not match')
+    if User.objects.filter(email=data['email']).exists():
+      raise ValidationError('User with email address '+data['email']+' already exists')
+    with transaction.atomic():
+      user = User.objects.create_user(
+        username=data['email'],
+        email=data['email'],
+        password=data['password']
+      )
+      customer = Customer.objects.create(user=user)
+    return Response(CustomerSerializer(customer).data)
 
   def put(self, request):
     user = request.user
     if not user.is_authenticated:
-      raise ValidationError('User is not logged in')
-    customer = user.customer
-    if not customer:
+      raise PermissionDenied('User is not logged in')
+    try:
+      customer = user.customer
+    except:
       customer = Customer.objects.create(user=user)
     data = request.data
     for field in CustomerSerializer.write_fields:
       if field in data:
         setattr(customer, field, data[field])
-    if 'first_name' in data:
-      user.first_name = data['first_name']
-    if 'last_name' in data:
-      user.last_name = data['last_name']
+    if 'first_name' in data['user']:
+      user.first_name = data['user']['first_name']
+    if 'last_name' in data['user']:
+      user.last_name = data['user']['last_name']
     if 'shipping_region' in data:
       shipping_region = ShippingRegion.objects.get(id=data['shipping_region'])
       customer.shipping_region = shipping_region

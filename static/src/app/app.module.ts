@@ -6,6 +6,8 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {StoreRouterConnectingModule} from '@ngrx/router-store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import {StripeCheckoutModule} from 'ng-stripe-checkout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppSettings } from './app.constant';
@@ -13,7 +15,6 @@ import { reducers, metaReducers } from './core/reducers';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './core/components/app';
 import { UserService } from './core/services/user';
-import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
@@ -30,6 +31,7 @@ import { ToastrModule } from 'ngx-toastr';
       enableHtml: true,
       progressBar: true
     }),
+    StripeCheckoutModule,
     CoreModule.forRoot(),
     EffectsModule.forRoot([]),
     StoreModule.forRoot(reducers, {metaReducers}),

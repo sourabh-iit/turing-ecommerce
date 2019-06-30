@@ -31,6 +31,7 @@ class ShoppingCartHandler(APIView):
           quantity = 1,
           buy_now=data['buy_now']
         )
+        request.session['cart_id']=cart_id
       else:
         try:
           item = ShoppingCart.objects.get(cart_id=cart_id, product__id=data['product']['id'], attributes=data['attributes'])
@@ -44,7 +45,6 @@ class ShoppingCartHandler(APIView):
             quantity = 1,
             buy_now=data['buy_now']
           )
-      request.session['cart_id']=cart_id
       return Response(ShoppingCartSerializer(item).data)
     except Product.DoesNotExist:
       raise ValidationError('')
@@ -85,9 +85,12 @@ class ShoppingCartItemHandler(APIView):
     cart_id = request.session.get('cart_id')
     if not cart_id:
       raise ValidationError('Cart item does not exist')
+    items = ShoppingCart.objects.filter(cart_id=cart_id)
     try:
-      item = ShoppingCart.objects.get(id=item_id, cart_id=cart_id)
+      item = items.get(id=item_id)
     except:
       raise ValidationError('Cart Item does not exist')
     item.delete()
+    if(items.count()==0):
+      request.session['cart_id'] = None
     return Response('successful')

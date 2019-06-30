@@ -60,7 +60,7 @@
           </div>
           <hr class="col-12">
           <h5 class="col-12">Delivery options</h5>
-          <div class="custom-control custom-radio col-6 mt-2" *ngFor="let shipping of shippings">
+          <div class="custom-control custom-radio col-6 mt-2" *ngFor="let shipping of _shippings">
             <input formControlName="shipping" [value]="shipping.id" type="radio"
               class="custom-control-input" id="{{shipping.shipping_type}}" name="shipping">
             <label class="custom-control-label" for="{{shipping.shipping_type}}">{{shipping.shipping_type}}</label>
@@ -91,7 +91,7 @@
       </div>
       <div class="col-3" *ngIf="customer">
         <h5 class="mb-3">Address</h5>
-        {{customer.address_1 + ' ' + customer.address_2}}
+        {{deliveryForm.get('address_1').value + ' ' + deliveryForm.get('address_2').value}}
         <h5 class="mt-3 mb-3">Delivery options</h5>
         {{getShipping().shipping_type}}
       </div>
@@ -111,69 +111,6 @@
         </tbody>
       </table>
     </ng-container>
-    <ng-container *ngIf="order.status===2">
-      <div class="col-12 mt-5 mb-5">
-        <form [formGroup]="paymentForm">
-          <div class="row">
-            <div class="col-6 form-group">
-              <label for="card_holder_name">Card holder's name</label>
-              <input id="card_holder_name" class="form-control" formControlName="name">
-            </div>
-            <div class="col-6 form-group">
-              <label for="card_number">Card number</label>
-              <input id="card_number" placeholder="**** **** **** ****" 
-                class="form-control" formControlName="card_number">
-              <div class="alert alert-danger" 
-                *ngIf="paymentForm.get('card_number').invalid && (paymentForm.get('card_number').touched || paymentForm.get('card_number').dirty)">
-                <div *ngIf="paymentForm.get('card_number').errors.required">
-                  Card number is required
-                </div>
-                <div *ngIf="paymentForm.get('card_number').errors.pattern">
-                  Card number is invalid
-                </div>
-              </div>
-            </div>
-            <div class="col-3 form-group">
-              <label for="card_number">Valid thru</label>
-              <div class="input-group">
-                <input id="card_number" class="form-control" placeholder="MM/YY" 
-                  ngbDatepicker #d="ngbDatepicker" formControlName="expiry_date">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">
-                    <i class="fa fa-calendar"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="alert alert-danger" 
-                *ngIf="paymentForm.get('expiry_date').invalid && (paymentForm.get('expiry_date').touched || paymentForm.get('expiry_date').dirty)">
-                <div *ngIf="paymentForm.get('expiry_date').errors.required">
-                  Expiry date is required
-                </div>
-                <div *ngIf="paymentForm.get('expiry_date').errors.invalid">
-                  Expiry date is invalid
-                </div>
-              </div>
-            </div>
-            <div class="col-3 form-group">
-              <label for="cvv">CVV/CVC*</label>
-              <input id="cvv" class="form-control" formControlName="cvv">
-              <div class="alert alert-danger" *ngIf="paymentForm.get('cvv').invalid && (paymentForm.get('cvv').touched || paymentForm.get('cvv').dirty)">
-                <div *ngIf="paymentForm.get('cvv').errors.required">
-                  CVV or CVC is required
-                </div>
-                <div *ngIf="paymentForm.get('cvv').errors.pattern">
-                  CVV or CVC is invalid
-                </div>
-              </div>
-            </div>
-            <div class="col-6 mt-4">
-              <small>*CVV or CVCis the card security code unique three digit number 
-                on the back of your card separate from this number.</small>
-            </div>
-          </div>
-        </form>
-      </div>
-    </ng-container>
     <ng-container *ngIf="order.status===3">
       <div class="col-12 text-center mb-3">
         <i class="fa fa-check-circle text-success mb-3" style="font-size: 4rem;"></i>
@@ -185,9 +122,9 @@
     <div class="col-12 mt-3 bg-light p-3 d-flex" 
       [ngClass]="{'justify-content-between': order.status!==3, 'justify-content-center': order.status===3}">
       <button class="btn btn-danger" *ngIf="order.status!==3" (click)="back()">Back</button>
-      <button class="btn btn-success" *ngIf="order.status===1 || order.status===0" 
-        [disabled]="!formValid()" (click)="order.status=order.status+1">Next Step</button>
-      <button class="btn btn-success" *ngIf="order.status===2" 
+      <button class="btn btn-success" *ngIf="order.status===0" 
+        [disabled]="!formValid()" (click)="next()">Next Step</button>
+      <button class="btn btn-success" *ngIf="order.status===1" 
         [disabled]="!formValid()" (click)="pay()">Pay</button>
       <a class="btn btn-danger" *ngIf="order.status===3" 
         [routerLink]="['/']">Back to shop</a>

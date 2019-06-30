@@ -1,0 +1,21 @@
+.product-short{
+  height: 300px;
+  position: relative;
+  .heading {
+    height: 20px;
+  }
+  .attributes{
+    position: absolute;
+    bottom: 70px;
+  }
+  .add-to-cart{
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+  }
+  .price {
+    position: absolute;
+    bottom: 70px;
+    right: 0px;
+  }
+}

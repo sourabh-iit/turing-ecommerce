@@ -1,7 +1,6 @@
 import * as fromProduct from '../../reducers';
 import * as productActions from '../../actions';
 import { Component, OnInit } from '@angular/core';
-import { EventService } from 'src/app/core/services/events';
 import { Store } from '@ngrx/store';
 import * as fromRoot from '../../../core/reducers';
 import { ProductService } from '../../services/service';
@@ -39,7 +38,6 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private store: Store<fromRoot.AppState>,
-    private eventService: EventService,
     private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute
@@ -68,6 +66,7 @@ export class ProductsComponent implements OnInit {
     this.store.select(fromProduct.selectAllDepartments).subscribe((depts: Department[])=>{
       if(depts && depts.length){
         this.departments = depts;
+        this.setDeartment();
       }
     });
     this.store.select(fromProduct.isCartLoaded).subscribe((value: any) => {
@@ -91,8 +90,9 @@ export class ProductsComponent implements OnInit {
   }
 
   public loadProducts(page: number=null, department: Department = null, category: Category = null){
-    if(page)
+    if(page){
       this.currentPage = page;
+    }
     if(!this.currentPage) return;
     const deptName = !this.department?'':this.department.name;
     const catName = this.category?this.category.name:'';
@@ -159,8 +159,9 @@ export class ProductsComponent implements OnInit {
     let attribute_values = [];
     for(let attribute in cartItem.attributes){
       attributes.push(attribute);
-      attribute_values.push(cartItem.attributes[attribute]);
+      attribute_values.push(cartItem.attributes[attribute].value);
     }
+    return attributes.join('/')+': '+attribute_values.join('/');
   }
 
   getKeys(object){
@@ -174,6 +175,14 @@ export class ProductsComponent implements OnInit {
   public goToCategory(cat){
     this.router.navigate(['/department',this.department.name,'category',cat.name,'products'],
       {relativeTo: this.route});
+  }
+
+  public totalItems(){
+    let total = 0;
+    for(let item of this.cartItems){
+      total += item.quantity;
+    }
+    return total;
   }
 
 }

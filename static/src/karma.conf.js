@@ -10,7 +10,14 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
-      require('@angular-devkit/build-angular/plugins/karma')
+      require('@angular-devkit/build-angular/plugins/karma'),
+      require('karma-scss-preprocessor')
+    ],
+    files: [
+      "./../node_modules/bootstrap/dist/css/bootstrap.css",
+      "./../node_modules/font-awesome/dist/css/font-awesome.css",
+      "./../node_modules/jquery/dist/jquery.js",
+      "./../node_modules/bootstrap/dist/js/bootstrap.js"
     ],
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser

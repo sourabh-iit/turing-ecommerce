@@ -3,7 +3,6 @@ import { AppSettings } from 'src/app/app.constant';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CustomerService } from '../../services/customer';
 import { Router, ActivatedRoute } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 
 import * as rootActions from '../../../core/actions/user';
 import * as fromRoot from '../../../core/reducers';
@@ -28,15 +27,23 @@ export class LoginComponent implements OnInit, OnDestroy {
     private customerService: CustomerService,
     private router: Router,
     private route: ActivatedRoute,
-    private toastr: ToastrService,
     private store: Store<fromRoot.AppState>
   ) {
     this.STATIC_URL = this.appSettings.STATIC_URL;
   }
 
   ngOnInit(){
-    if(this.appSettings.isLoggedIn)
+    if(this.appSettings.isLoggedIn){
+      this.navigate();
+    }
+  }
+
+  navigate(){
+    if(this.appSettings.navigateToCheckOut){
+      this.router.navigate(['/checkout/'],{relativeTo: this.route});
+    } else {
       this.router.navigate(['/'],{relativeTo: this.route});
+    }
   }
 
   ngOnDestroy() {
@@ -47,7 +54,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.customerService.login(this.userForm.value).subscribe((data: any)=>{
       this.store.dispatch(new rootActions.UpdateUser(data));
       this.appSettings.isLoggedIn = true;
-      this.router.navigate(['/'],{relativeTo: this.route});
+      this.navigate();
     });
   }
 }

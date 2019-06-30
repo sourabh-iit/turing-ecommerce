@@ -22,6 +22,8 @@ class ShoppingCartSerializer(serializers.ModelSerializer):
 
   @staticmethod
   def get_attributes(cart):
+    if isinstance(cart.attributes, dict):
+      return cart.attributes
     return ast.literal_eval(cart.attributes)
 
   class Meta:

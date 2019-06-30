@@ -2,6 +2,7 @@
 
 
 .left-side-container {
+  box-shadow: 3px 3px 2px #f1ebeb;
   .box{
     border: 1px solid gray;
     margin-top: 2rem;
@@ -12,9 +13,8 @@
       font-weight: 600;
     }
     .content{
-      padding: 15px;
       .item{
-        display: flex;
+        padding: 5px 10px;
       }
     }
   }
@@ -66,6 +66,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: -4px 4px 5px 0px #e0e0e0;
   .user-dropdown{
     font-size: 2rem;
     cursor: pointer;
@@ -185,4 +186,44 @@
 
 #toast-container > div {
   opacity:1;
+}
+
+.page{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+  line-height: 30px;
+  font-size: 1.2rem;
+  margin-left: 3px;
+  cursor: pointer;
+  &:hover{
+    background: rgba(255,0,0,0.2);
+  }
+  &.selected {
+    background: red;
+    color: white;
+    font-weight: 800;
+  }
+}
+
+.icon-o-button{
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  font-size: 1.2rem;
+  background: aliceblue;
+  text-align: center;
+  border-radius: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.product-container{
+  box-shadow: -4px 4px 4px 0px #e8e6e6;
+  &:hover{
+    box-shadow: -1px 8px 7px 4px #eae5e5;
+  }
 }

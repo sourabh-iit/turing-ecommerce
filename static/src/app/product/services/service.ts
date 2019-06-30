@@ -94,9 +94,9 @@ export class ProductService{
     return this.http.put(url, order);
   }
 
-  public createOrder(order: Order){
+  public createOrder(data: {token: string, order: Order}){
     const url = `${this.appSettings.API_PREFIX}orders`;
-    return this.http.post(url, order);
+    return this.http.post(url, data);
   }
 
   public loadReview(orderDetailId: number){

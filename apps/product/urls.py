@@ -3,7 +3,7 @@ from django.conf.urls import url
 import apps.product.views as views
 
 urlpatterns = (
-    url(r'^/?$', views.all_products, name="all-products"),
+    url(r'^$', views.all_products, name="all-products"),
     url(r'^cart/?$', views.all_products, name="cart"),
     url(r'^orders/?$', views.all_products, name="orders"),
     url(r'^orders/(?P<order_id>[0-9]+)/?$', views.order, name="order"),

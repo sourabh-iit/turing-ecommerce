@@ -6,18 +6,20 @@
   <div class="content mt-2">
     <div class="row">
       <div class="col-7">
-        <div>{{product.description}}</div>
-        <div class="mt-2">Price: 
-          <ng-container *ngIf="toFloat(product.discounted_price)>0; else originalPrice">
-            <del>{{product.price}}</del> {{product.discounted_price}}
-          </ng-container>
-          <ng-template #originalPrice>{{product.price}}</ng-template>
+        <div>
+          {{product.description | slice:0:150}}<ng-container *ngIf="product.description.length>150">...</ng-container>
         </div>
       </div>
       <div class="col-5">
         <img [src]="STATIC_URL+'images/product_images/'+product.thumbnail">
       </div>
-      <div class="col-7 mt-2 mb-2 d-flex">
+      <div class="col-5 price">Price: 
+        <ng-container *ngIf="toFloat(product.discounted_price)>0; else originalPrice">
+          <del>${{product.price}}</del>&nbsp; <b>${{product.discounted_price}}</b>
+        </ng-container>
+        <ng-template #originalPrice><b>${{product.price}}</b></ng-template>
+      </div>
+      <div class="col-7 d-flex attributes">
         <ng-container *ngFor="let attribute_name of getKeys(product.attributes); let i = index">
           <div class="d-flex align-items-center" [class.ml-2]="i!=0">
             {{attribute_name}}:
@@ -28,8 +30,9 @@
           </div>
         </ng-container>
       </div>
-      <div class="col-12 mt-2">
-        <button (click)="addToCart(true)">Add to Cart</button>
+      <div class="mt-2 add-to-cart">
+        <button class="btn btn-primary" [disabled]="!product.attributes['Color'] || !product.attributes['Size']" 
+          (click)="addToCart(true)">Add to Cart</button>
       </div>
     </div>
   </div>

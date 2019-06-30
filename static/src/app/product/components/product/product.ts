@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { ProductService } from '../../services/service';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { AppSettings } from 'src/app/app.constant';
 import * as fromRoot from '../../../core/reducers';
@@ -9,7 +8,8 @@ import * as fromProduct from '../../reducers';
 
 @Component({
   selector: 'app-product',
-  templateUrl: './product.html'
+  templateUrl: './product.html',
+  styleUrls: ['./product.scss']
 })
 export class ProductComponent implements OnInit, OnDestroy {
 
@@ -20,8 +20,6 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   constructor(
     private productService: ProductService,
-    private router: ActivatedRoute,
-    private route: Router,
     private appSettings: AppSettings,
     private store: Store<fromRoot.AppState>
   ) {
